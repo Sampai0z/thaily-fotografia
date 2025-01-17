@@ -3,6 +3,7 @@
 } */
 .banner {
   width: 100%;
+
   position: absolute;
   z-index: -1;
 }
@@ -20,5 +21,8 @@
   font-size: 28px;
 }
 .bannerButton {
-  width: 100px;
+  width: 150px;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
 }

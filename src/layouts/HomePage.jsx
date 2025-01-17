@@ -10,7 +10,7 @@ export default function HomePage() {
           <p className={c.bannerText}>
             Colecionando momentos e eternizando memórias
           </p>
-          <button className={c.bannerButton}>Contacte-me</button>
+          <button className={c.bannerButton}>Contate-me</button>
         </div>
       </div>
     </>
