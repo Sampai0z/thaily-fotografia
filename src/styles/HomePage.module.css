@@ -1,0 +1,24 @@
+/* .box {
+  position: relative;
+} */
+.banner {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.bannerBox {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  height: 100%;
+  justify-content: center;
+}
+.bannerText {
+  color: white;
+  margin-top: 20%;
+  width: 30%;
+  font-size: 28px;
+}
+.bannerButton {
+  width: 100px;
+}
