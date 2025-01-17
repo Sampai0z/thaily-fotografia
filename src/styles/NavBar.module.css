@@ -1,7 +1,11 @@
 .header {
+  height:10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header img {
+  width: 110px;
 }
 .navBar {
   list-style: none;
