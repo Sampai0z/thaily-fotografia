@@ -2,7 +2,8 @@ import c from "../styles/NavBar.module.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { useState } from "react";
-// import { Backdrop } from "@mui/material";
+import { Backdrop } from "@mui/material";
+
 export default function NavBar() {
   const [isActive, setIsActive] = useState(false);
 
@@ -92,7 +93,14 @@ export default function NavBar() {
               >
                 Contact
               </Link>
-              <div onClick={handleClose}></div>
+              <Backdrop
+                sx={{
+                  color: "#fff",
+                  zIndex: (theme) => theme.zIndex.drawer - 1251,
+                }}
+                open={open}
+                onClick={handleClose}
+              ></Backdrop>
             </div>
           </div>
         </div>
