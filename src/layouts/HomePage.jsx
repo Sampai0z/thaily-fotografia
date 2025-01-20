@@ -2,6 +2,8 @@ import Banner from "../assets/banner.jpg";
 import c from "../styles/HomePage.module.css";
 import SlideEnsaios from "../components/SlideEnsaios.jsx";
 
+
+
 export default function HomePage() {
   return (
     <>
@@ -14,7 +16,7 @@ export default function HomePage() {
           <button className={c.bannerButton}>Contate-me</button>
         </div>
       </div>
-      <SlideEnsaios/>
+      <SlideEnsaios />
     </>
   );
 }
