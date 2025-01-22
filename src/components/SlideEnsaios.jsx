@@ -3,8 +3,12 @@ import c from "../styles/SlideEnsaios.module.css"
 
 const images = [
     { src: "selamento.jpg", alt: "Selamento" },
-    { src: "pre_wedding.jpg", alt: "pre_wedding" },
-    { src: "cerimonia_casamento.jpg", alt: "cerimonia_casamento" },
+    { src: "pre_wedding.jpg", alt: "Pre_Wedding" },
+    { src: "", alt: "Cerimônia de Casamento" },
+    { src: "ensaio_feminino.jpg", alt: "Ensaio Feminino" },
+    { src: "ensaio_infantil.jpg", alt: "Ensaio Infantil" },
+    { src: "ensaio_masculino.jpg", alt: "Ensaio Masculino" },
+    { src: "aniversario.jpg", alt: "Aniversário" },
   ];
 
 export default function SlideEnsaios () {
@@ -29,24 +33,32 @@ export default function SlideEnsaios () {
   console.log(currentIndex)
 
   return (
-    <div className={c.sliderContainer}>
-      <button className={c.prevButton} onClick={prevSlide}>
-        ❮
-      </button>
-      <div className={c.slider}>
-      {images.map((image, index) => (
-        <div
-            key={index}
-            className={`${c.slide} ${index === currentIndex ? c.active : c.inactive}`}
-        >
-            <img src={image.src} alt={image.alt} />
-        </div>
-        ))}
-
+    <>
+      <div className={c.titleworks}>
+        <hr />
+        <span> ALGUNS TRABALHOS </span>
+        <hr />
       </div>
-      <button className={c.nextButton} onClick={nextSlide}>
-        ❯
-      </button>
-    </div>
+      <div className={c.sliderContainer}>
+        <button className={c.prevButton} onClick={prevSlide}>
+          ❮
+        </button>
+        <div className={c.slider}>
+        {images.map((image, index) => (
+          <div
+              key={index}
+              className={`${c.slide} ${index === currentIndex ? c.active : c.inactive}`}
+          >
+              <a className={c.vermais} href={`#`}>Ver mais</a>
+              <img src={image.src} alt={image.alt} />
+          </div>
+          ))}
+
+        </div>
+        <button className={c.nextButton} onClick={nextSlide}>
+          ❯
+        </button>
+      </div>
+    </>
   );
 };
