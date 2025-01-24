@@ -1,6 +1,7 @@
 import Banner from "../assets/banner.jpg";
 import c from "../styles/HomePage.module.css";
 import SlideEnsaios from "../components/SlideEnsaios.jsx";
+import Sobre from "./Sobre.jsx"
 
 
 
@@ -17,6 +18,7 @@ export default function HomePage() {
         </div>
       </div>
       <SlideEnsaios />
+      <Sobre />
     </>
   );
 }

@@ -49,7 +49,7 @@ export default function NavBar() {
           </li>
           <li>
             <Link to="/eventos" className={c.link}>
-              Eventos
+              Sobre?
             </Link>
           </li>
         </ul>
