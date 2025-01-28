@@ -1,6 +1,7 @@
-import c from "../styles/Sobre.module.css"
+import c from "../styles/Sobre.module.css";
 import Thaily from "/Thaily.jpg"
 import detail1 from "/detalheSobre.png"
+
 export default function Sobre(){
     return(
         <>
