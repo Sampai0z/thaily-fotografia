@@ -1,10 +1,8 @@
 export default function Ensaios() {
   const urls = [];
 
-  for (let index = 1; index <= 17; index++) {
-    urls.push(
-      `https://storage.cloud.google.com/thaily-fotografia/Marangon%20(${index}%20de%2017).jpg`
-    );
+  for (let index = 1; index <= 20; index++) {
+    urls.push();
   }
 
   return (
