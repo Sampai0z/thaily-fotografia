@@ -48,7 +48,7 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/eventos" className={c.link}>
+            <Link to="#" className={c.link}>
               Sobre?
             </Link>
           </li>

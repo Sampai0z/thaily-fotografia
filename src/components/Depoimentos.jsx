@@ -1,5 +1,5 @@
 // import { Quote } from "lucide-react";
-import styles from "../styles/components/Depoimentos.module.css";
+import c from "../styles/components/Depoimentos.module.css";
 
 export default function Depoimentos() {
   const testimonials = [
@@ -18,10 +18,10 @@ export default function Depoimentos() {
   ];
 
   return (
-    <section className={styles.section}>
-      <div className={styles.header}>
-        <h2 className={styles.title}>Fornecemos valor aos nossos clientes</h2>
-        <p className={styles.subtitle}>
+    <section className={c.section}>
+      <div className={c.header}>
+        <h2 className={c.title}>Fornecemos valor aos nossos clientes</h2>
+        <p className={c.subtitle}>
           Sample text. Click to Egestas egestas fringilla phasellus faucibus
           scelerisque eleifend donec pretium vulputate. Pharetra magna ac
           placerat vestibulum. Quam lacus suspendisse faucibus interdum posuere
@@ -29,12 +29,12 @@ export default function Depoimentos() {
         </p>
       </div>
 
-      <div className={styles.grid}>
+      <div className={c.grid}>
         {testimonials.map((testimonial, index) => (
-          <div key={index} className={styles.card}>
-            {/* <Quote className={styles.icon} /> */}
-            <p className={styles.testimonialText}>{testimonial.text}</p>
-            <p className={styles.author}>{testimonial.author}</p>
+          <div key={index} className={c.card}>
+            {/* <Quote className={c.icon} /> */}
+            <p className={c.testimonialText}>{testimonial.text}</p>
+            <p className={c.author}>{testimonial.author}</p>
           </div>
         ))}
       </div>

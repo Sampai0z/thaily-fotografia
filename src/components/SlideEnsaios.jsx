@@ -4,7 +4,6 @@ import c from "../styles/components/SlideEnsaios.module.css";
 const images = [
   { src: "selamento.jpg", alt: "Selamento" },
   { src: "pre_wedding.jpg", alt: "Pre_Wedding" },
-  { src: "", alt: "Cerimônia de Casamento" },
   { src: "ensaio_feminino.jpg", alt: "Ensaio Feminino" },
   { src: "ensaio_infantil.jpg", alt: "Ensaio Infantil" },
   { src: "ensaio_masculino.jpg", alt: "Ensaio Masculino" },
@@ -17,7 +16,6 @@ export default function SlideEnsaios() {
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => {
       const newIndex = (prevIndex + 1) % images.length;
-      console.log("Next index:", newIndex); // Verifique o índice correto
       return newIndex;
     });
   };
@@ -25,12 +23,9 @@ export default function SlideEnsaios() {
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => {
       const newIndex = prevIndex === 0 ? images.length - 1 : prevIndex - 1;
-      console.log("Prev index:", newIndex); // Verifique o índice correto
       return newIndex;
     });
   };
-
-  console.log(currentIndex);
 
   return (
     <>

@@ -15,10 +15,11 @@
   justify-content: right;
   font-size: 25px;
   margin-right: 10px;
+  color: rgb(87, 48, 140);
 }
 .link {
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: rgb(87, 48, 140);
 }
 
 /* RESPONSIVO */
