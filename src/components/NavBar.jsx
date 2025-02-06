@@ -48,17 +48,17 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/eventos" className={c.link}>
-              Sobre?
+            <Link to="/sobre" className={c.link}>
+              Sobre
             </Link>
           </li>
         </ul>
         {/* responsive nav-bar */}
 
-        <div className={c.div_nav_responsive}>
+        <div className={c.div_nav_responsive} onClick={toggleAll}>
           <div
             className={isActive ? `${c.icon} ${c.iconActive}` : c.icon}
-            onClick={toggleAll}
+            
           >
             <div className={`${c.hamburguer} ${c.hamburguerIcon}`}></div>
           </div>

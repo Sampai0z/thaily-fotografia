@@ -28,11 +28,11 @@
   align-content: center;
   justify-content: right;
   flex-direction: column;
+
 }
 .hamburguer {
   top: 50%;
-  background-color: #668ac4;
-  /* background-color: #BDA4EF; */
+  background-color: #BDA4EF;
 
   position: absolute;
   transition: 0.5s;
@@ -47,7 +47,7 @@
   position: absolute;
   width: 25px;
   height: 4px;
-  background-color: #9eb2d1;
+  background-color: #9b82cf;
   transition: 0.5s;
 }
 
@@ -57,7 +57,7 @@
   position: absolute;
   width: 25px;
   height: 4px;
-  background-color: #3769bb;
+  background-color: #7960ae;
   transition: 0.5s;
 }
 

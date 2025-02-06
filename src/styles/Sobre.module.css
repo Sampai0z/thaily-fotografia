@@ -1,8 +1,10 @@
 .Container{
     position: relative;
-    min-width: 100%;
-    height: 75vh;
-    padding: 1rem 1rem 1rem 4rem;
+    max-width: 60vw;
+    height: 60vh;
+    padding: 1rem 0rem;
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #F5F5F5;
     display: flex;
     justify-content: space-evenly;
@@ -21,8 +23,8 @@
 
 .caixaTexto{
     position: relative;
-    width: 75%;
-    height: 100%;
+    width: 75vw;
+    height: auto;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -30,25 +32,53 @@
 .caixaTexto p{
     padding: 0rem 2.5rem;
     text-align: justify;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color:hsl(259, 32.50%, 52.90%);
 }
 .detalhe{
     position: absolute;
     top: 0rem;
     right: 0rem;
-    width: 15%;
+    width: 25%;
     z-index: -1;
 }
 .detalhe2{
     position: absolute;
     bottom: 0rem;
     left: 0rem;
-    width: 15%;
+    width: 25%;
     z-index: -1;
     transform: rotate(180deg);
 }
 
+@media (min-width:768px) and (max-width: 1280px) {
+
+    .foto{
+        width: fit-content;
+        height: 100%;
+    }
+
+    .foto img{
+        width: auto;
+        height: 100%;
+    }
+
+    .caixaTexto{
+        position: relative;
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: left;
+        align-items: start;
+    }
+    .caixaTexto p{
+        padding: 0rem 1.5rem;
+        text-align: justify;
+        font-size: 1rem;
+        color:hsl(259, 32.50%, 52.90%);
+    }
+
+}
 @media (max-width: 768px) {
 
     .Container{
@@ -84,7 +114,8 @@
         align-items: center;
     }
     .caixaTexto p{
-        padding: 0rem 1.5rem;
+
+        padding: 0rem .5rem;
         text-align: justify;
         font-size: 1rem;
         color:hsl(259, 32.50%, 52.90%);
@@ -94,14 +125,16 @@
         position: absolute;
         top: 0rem;
         right: 0rem;
-        width: 25%;
+        width: 30%;
+        opacity: 50%;
         z-index: -1;
     }
     .detalhe2{
         position: absolute;
         bottom: 0rem;
         left: 0rem;
-        width: 25%;
+        width: 30%;
+        opacity: 50%;
         z-index: -1;
         transform: rotate(180deg);
     }
