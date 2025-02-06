@@ -1,0 +1,151 @@
+.header {
+  /* height: 10vh; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+.header img {
+  width: 110px;
+}
+.navBar {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: right;
+  font-size: 25px;
+  margin-right: 10px;
+}
+.link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/* RESPONSIVO */
+.div_nav_responsive {
+  display: flex;
+  position: relative;
+  align-content: center;
+  justify-content: right;
+  flex-direction: column;
+}
+.hamburguer {
+  top: 50%;
+  background-color: #668ac4;
+  /* background-color: #BDA4EF; */
+
+  position: absolute;
+  transition: 0.5s;
+  width: 20px;
+  height: 4px;
+  right: 23px;
+  transition: 0.5s;
+}
+.hamburguer::before {
+  top: -12px;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: #9eb2d1;
+  transition: 0.5s;
+}
+
+.hamburguer::after {
+  top: 12px;
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 4px;
+  background-color: #3769bb;
+  transition: 0.5s;
+}
+
+.icon {
+  position: absolute;
+  right: 6%;
+  width: fit-content;
+  height: 4px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.link_responsive {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  justify-content: right;
+  padding: 12px;
+  font-size: 18px;
+  z-index: 5;
+}
+
+.icon.iconActive .hamburguer {
+  background: transparent;
+  box-shadow: 0 2px 5px transparent;
+}
+
+.icon.iconActive .hamburguer:after {
+  top: 0;
+  background-color: #7960ae;
+  transform: rotate(225deg);
+  box-shadow: 0 -2px 5px rgb(0, 0, 0, 0.2);
+}
+.icon.iconActive .hamburguer:before {
+  top: 0;
+  background: white;
+  transform: rotate(135deg);
+  box-shadow: 0 -2px 5px rgb(0, 0, 0, 0.2);
+}
+
+.menu.menuOpen {
+  display: block;
+  z-index: 3;
+  width: 150px;
+  box-shadow: 10 0px 69px 5px rgb(0, 0, 0, 0.59);
+}
+.menu.menuClose {
+  display: none;
+  width: 0px;
+}
+
+.navBar_responsive {
+  display: flex;
+  top: -42px;
+  position: absolute;
+  right: 0.1px;
+  flex-direction: column;
+  justify-content: right;
+  background-color: rgb(20, 19, 19);
+  width: 250px;
+  background-size: auto;
+  height: 100vh;
+  padding-top: 85px;
+  padding-right: 20px;
+  color: white;
+  z-index: index;
+}
+
+@media (max-width: 1080px) {
+  .navBar {
+    display: none;
+  }
+  .header img {
+    width: 110px;
+  }
+  .div_nav_responsive {
+    display: flex;
+  }
+}
+
+@media (min-width: 1080px) {
+  .div_nav_responsive {
+    display: none;
+  }
+}
+@media (max-width: 690px) {
+  .header {
+    padding: 0;
+  }
+}

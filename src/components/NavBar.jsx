@@ -1,4 +1,4 @@
-import c from "../styles/NavBar.module.css";
+import c from "../styles/components/NavBar.module.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/Logo.png";
 import { useState } from "react";

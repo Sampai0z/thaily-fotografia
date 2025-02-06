@@ -1,4 +1,4 @@
-import c from "../styles/Footer.module.css";
+import c from "../styles/components/Footer.module.css";
 import logo from "../assets/logoDark.png";
 
 import { Link } from "react-router-dom";
