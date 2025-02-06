@@ -1,4 +1,4 @@
-import c from "../styles/NavBar.module.css";
+import c from "../styles/components/NavBar.module.css";
 import { Link } from "react-router-dom";
 import logo from "../assets/Logo.png";
 import { useState } from "react";
@@ -48,8 +48,8 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/sobre" className={c.link}>
-              Sobre
+            <Link to="#" className={c.link}>
+              Sobre?
             </Link>
           </li>
         </ul>

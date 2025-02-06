@@ -1,0 +1,16 @@
+.titleworks {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  margin: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.75rem;
+  color: #7960ae;
+}
+
+.titleworks hr {
+  width: 25%;
+  height: 3px;
+  background-color: #9b82cf;
+}

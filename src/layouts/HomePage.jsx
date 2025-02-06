@@ -1,23 +1,18 @@
-import Banner from "../assets/banner.jpg";
-import c from "../styles/HomePage.module.css";
+import BannerComponent from "../components/BannerComponent.jsx";
+import Depoimentos from "../components/Depoimentos.jsx";
+import Divider from "../components/Divider.jsx";
 import SlideEnsaios from "../components/SlideEnsaios.jsx";
-import Sobre from "./Sobre.jsx"
-
-
+import Sobre from "./Sobre.jsx";
 
 export default function HomePage() {
   return (
     <>
-      <div className={c.box}>
-        <img src={Banner} alt="banner" className={c.banner} />
-        <div className={c.bannerBox}>
-          <p className={c.bannerText}>
-            Colecionando momentos e eternizando memórias
-          </p>
-          <button className={c.bannerButton}>Contate-me</button>
-        </div>
-      </div>
+      <BannerComponent />
+      <Divider text="ALGUNS TRABALHOS" />
       <SlideEnsaios />
+      <Divider text="DEPOIMENTOS" />
+      <Depoimentos />
+      <Divider text="SOBRE MIM" />
       <Sobre />
     </>
   );
