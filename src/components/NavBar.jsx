@@ -55,10 +55,10 @@ export default function NavBar() {
         </ul>
         {/* responsive nav-bar */}
 
-        <div className={c.div_nav_responsive}>
+        <div className={c.div_nav_responsive} onClick={toggleAll}>
           <div
             className={isActive ? `${c.icon} ${c.iconActive}` : c.icon}
-            onClick={toggleAll}
+            
           >
             <div className={`${c.hamburguer} ${c.hamburguerIcon}`}></div>
           </div>

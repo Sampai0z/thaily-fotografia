@@ -1,7 +1,27 @@
+<<<<<<< HEAD:src/styles/SlideEnsaios.module.css
+.titleworks{
+  width: 100vw;
+  height: 7vh;
+  padding: 0rem 15vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #7960AE;
+}
+
+.titleworks hr{
+  width: 25%;
+  height: 3px;
+  background-color: #9B82CF;
+}
+
+=======
+>>>>>>> 508a8a750b00d559f702b220160391c02b7c32e5:src/styles/components/SlideEnsaios.module.css
 .sliderContainer {
   position: relative;
-  width: 100%;
-  height: 90vh;
+  width: 60vw;
+  height: 60vh;
   padding: 0rem 4rem;
   /* max-width: 1024px; */
   margin: auto;
@@ -68,13 +88,22 @@
   transform: translateY(-50%);
   width: 4rem;
   height: 100%;
+<<<<<<< HEAD:src/styles/SlideEnsaios.module.css
+  background-color: rgb(230, 230, 230);
+=======
   background-color: rgb(226, 226, 226);
+>>>>>>> 508a8a750b00d559f702b220160391c02b7c32e5:src/styles/components/SlideEnsaios.module.css
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD:src/styles/SlideEnsaios.module.css
+  font-size: 3.0rem;
+  color: #57308c;
+=======
   font-size: 4rem;
   color: rgb(87, 48, 140);
+>>>>>>> 508a8a750b00d559f702b220160391c02b7c32e5:src/styles/components/SlideEnsaios.module.css
   cursor: pointer;
   z-index: 1;
 }
@@ -95,6 +124,24 @@
 }
 
 @media (max-width: 690px) {
+
+  .titleworks{
+    width: 100vw;
+    height: 7vh;
+    padding: 0rem 0vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1rem;
+    color: #7960AE;
+  }
+
+  .titleworks hr{
+    width: 25%;
+    height: 3px;
+    background-color: #9B82CF;
+  }
+
   .sliderContainer {
     position: relative;
     width: 100%;
