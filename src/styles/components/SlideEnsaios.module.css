@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src/styles/SlideEnsaios.module.css
 .titleworks{
   width: 100vw;
   height: 7vh;
@@ -16,8 +15,6 @@
   background-color: #9B82CF;
 }
 
-=======
->>>>>>> 508a8a750b00d559f702b220160391c02b7c32e5:src/styles/components/SlideEnsaios.module.css
 .sliderContainer {
   position: relative;
   width: 60vw;
@@ -88,22 +85,13 @@
   transform: translateY(-50%);
   width: 4rem;
   height: 100%;
-<<<<<<< HEAD:src/styles/SlideEnsaios.module.css
   background-color: rgb(230, 230, 230);
-=======
-  background-color: rgb(226, 226, 226);
->>>>>>> 508a8a750b00d559f702b220160391c02b7c32e5:src/styles/components/SlideEnsaios.module.css
   border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD:src/styles/SlideEnsaios.module.css
   font-size: 3.0rem;
   color: #57308c;
-=======
-  font-size: 4rem;
-  color: rgb(87, 48, 140);
->>>>>>> 508a8a750b00d559f702b220160391c02b7c32e5:src/styles/components/SlideEnsaios.module.css
   cursor: pointer;
   z-index: 1;
 }
