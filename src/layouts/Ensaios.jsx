@@ -1,43 +1,35 @@
-import { useEffect, useState } from "react";
+import fotos from "../assets/fotos.json"; // Importando o arquivo JSON
 
 export default function Ensaios() {
-  const [images, setImages] = useState([]);
-  const idPasta = "1dwto-Gd3XmT209WQAtL3WLevp6gLRVPm";
-  const apiKey = import.meta.env.VITE_API_KEY;
+  // https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/10.jpeg
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      const response = await fetch(
-        `https://www.googleapis.com/drive/v3/files?q='${idPasta}'+in+parents&fields=files(id,name,mimeType)&key=${apiKey}`
-      );
-      const data = await response.json();
-
-      if (response.status === 200) {
-        console.log("Requisição bem-sucedida:", data);
-      } else {
-        console.error("Erro na requisição", data);
-      }
-
-      if (data.files) {
-        setImages(data.files);
-      }
-    };
-
-    fetchImages();
-  }, [apiKey, idPasta]);
-
+  let urls = [];
+  for (let index = 1; index <= 37; index++) {
+    let url = `https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/${index}.jpeg`;
+    urls.push(url);
+  }
+  console.log(urls);
   return (
     <div>
       <h1>Imagens</h1>
-      {images.map((file) => (
-        <div key={file.id}>
-          <img
-            src={`http://localhost:5000/proxy?url=https://drive.google.com/uc?export=view&id=${file.id}`}
-            alt={file.name}
-            width={300}
-            crossOrigin="anonymous"
-            referrerPolicy="no-referrer"
-          />
+      {fotos.map((pasta, index) => (
+        <div key={index}>
+          <h2>{pasta.pasta}</h2>
+          {pasta.arquivos.length > 0 ? (
+            <div>
+              {pasta.arquivos.map((link, idx) => (
+                <img
+                  key={idx}
+                  src={link}
+                  alt={`Imagem ${idx + 1}`}
+                  // className={c.HFAOUFGHSAOU}
+                  style={{ maxWidth: "50%", margin: "10px" }}
+                />
+              ))}
+            </div>
+          ) : (
+            <p>Sem imagens disponíveis</p>
+          )}
         </div>
       ))}
     </div>

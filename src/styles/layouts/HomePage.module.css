@@ -1,14 +1,13 @@
- .box {
+.box {
   position: relative;
-  display:flex;
+  display: flex;
 }
 .banner {
   width: 100%;
-  
   z-index: -1;
 }
 .bannerBox {
-  position:absolute;
+  position: absolute;
   display: flex;
   flex-direction: column;
   margin-left: 20px;
@@ -16,7 +15,7 @@
   justify-content: center;
 }
 .bannerText {
-  color: white;
+  color: rgb(255, 255, 255);
   margin-top: 20%;
   width: 50%;
   font-size: 28px;
