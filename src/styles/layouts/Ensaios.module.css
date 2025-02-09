@@ -1,0 +1,33 @@
+.containerImagens {
+    width: 100vw;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0rem;
+
+}
+
+.nomePasta{
+    width: 70%;
+    font-size: 2rem;
+    text-transform: capitalize;
+    
+}
+
+.galeria{
+    width: 70%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: masonry;
+  
+      
+}
+
+.galeria img {
+    width: 200px;
+    height: auto;
+    border: 1px solid;
+  }
