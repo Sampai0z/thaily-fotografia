@@ -11,6 +11,30 @@
   margin-bottom: 1rem;
 }
 
+.subMenu{
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+    border-top: 2px solid #7960ae;
+}
+
+.subMenu button{
+    background-color: #f5f5f5;
+    border: 0px;
+    /* border-top: 2px solid #7960ae; */
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.subMenu button:hover{
+    background-color: #e5e5e5;
+    color:#8a51bf;
+}
+
 .galeria {
   column-count: 1;
   column-gap: 1rem;
@@ -20,12 +44,33 @@
   .galeria {
     column-count: 2;
   }
+  .subMenu{
+    width: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 0.1rem;
+    border-top: 2px solid #7960ae;
+}
+
+    .subMenu button{
+        background-color: #05f5f5;
+        border: 0px;
+        padding: 0.1rem 0.5rem;
+        font-size: 0.7rem;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
 }
 
 @media (min-width: 768px) {
   .galeria {
     column-count: 3;
   }
+
+  
 }
 
 @media (min-width: 1024px) {

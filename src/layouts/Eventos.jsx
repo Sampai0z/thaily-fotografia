@@ -5,14 +5,14 @@ import { Dialog, DialogActions, DialogContent, Button } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Ensaios() {
-  const [categoriaFilter, setCategoriaFilter] = useState("ensaio");
+  const [categoriaFilter, setCategoriaFilter] = useState("prewedding");
   const [showFotos, setShowFotos] = useState(false); // Estado para controlar o tempo de espera
   const [selectedImage, setSelectedImage] = useState(null); // Estado para armazenar a imagem selecionada para exibir no modal
 
   // Filtro dinâmico com base na categoria selecionada
   const fotosFilter =
-    categoriaFilter === "todos"
-      ? fotos.categoria=="ensaio" || fotos.categoria=="infantil"
+    categoriaFilter === "casamento"
+      ? fotos.categoria=="prewedding" || fotos.categoria=="casamento" || fotos.categoria=="aniversario"
       : fotos.filter(
           (pasta) =>
             pasta.categoria && pasta.categoria.toLowerCase() === categoriaFilter
@@ -23,10 +23,10 @@ export default function Ensaios() {
     setCategoriaFilter(categoria.toLowerCase());
   };
 
-  // Espera 5 segundos antes de mostrar as fotos
+  // Espera 1 segundos antes de mostrar as fotos
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowFotos(true); // Após 5 segundos, mostrar as fotos
+      setShowFotos(true); // Após 1 segundos, mostrar as fotos
     }, 1000);
 
     // Limpa o timer quando o componente for desmontado
@@ -45,11 +45,11 @@ export default function Ensaios() {
 
   return (
     <div>
-
       {/* Botões para mudar a categoria do filtro */}
       <div className={c.subMenu}>
-        <button onClick={() => handleFilterChange("ensaio")}>Ensaio</button>
-        <button onClick={() => handleFilterChange("infantil")}>Infantil</button>
+        <button onClick={() => handleFilterChange("aniversario")}>Aniversário</button>
+        <button onClick={() => handleFilterChange("casamento")}>Casamento</button>
+        <button onClick={() => handleFilterChange("prewedding")}>Pré-Weeding</button>
       </div>
 
       {/* Exibe um texto enquanto espera 5 segundos */}
