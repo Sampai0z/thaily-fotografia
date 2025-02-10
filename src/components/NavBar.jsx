@@ -30,7 +30,9 @@ export default function NavBar() {
   return (
     <>
       <header className={c.header}>
-        <img src={logo} alt="teste" />
+        <Link to="/">
+          <img src={logo} alt="teste" />
+        </Link>
         <ul className={c.navBar}>
           <li>
             <Link to="/" className={c.link}>
@@ -56,10 +58,7 @@ export default function NavBar() {
         {/* responsive nav-bar */}
 
         <div className={c.div_nav_responsive} onClick={toggleAll}>
-          <div
-            className={isActive ? `${c.icon} ${c.iconActive}` : c.icon}
-            
-          >
+          <div className={isActive ? `${c.icon} ${c.iconActive}` : c.icon}>
             <div className={`${c.hamburguer} ${c.hamburguerIcon}`}></div>
           </div>
 

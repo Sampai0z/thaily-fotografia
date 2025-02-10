@@ -1,6 +1,5 @@
 import c from "../styles/components/Footer.module.css";
 import logo from "../assets/logoDark.png";
-
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -23,7 +22,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/ensaios" className={c.link}>
+              <Link to="#" className={c.link}>
                 SOBRE
               </Link>
             </li>
@@ -34,24 +33,41 @@ export default function Footer() {
           <div className={c.contatoListaDiv}>
             <ul className={c.contatoLista}>
               <li>
-                <i className="fa-brands fa-whatsapp"></i> (12)93456-7890
+                <i className="fa-brands fa-whatsapp"></i>
+                <a href="#" className={c.a}>
+                  &nbsp; (12)93456-7890
+                </a>
               </li>
               <li>
-                <i className="fa-brands fa-instagram"></i> thaily_fotografia
+                <i className="fa-brands fa-instagram"></i>
+                <a href="#" className={c.a}>
+                  &nbsp; thaily_fotografia
+                </a>
               </li>
             </ul>
             <ul className={c.contatoLista}>
               <li>
-                <i className="fa-brands fa-facebook"></i> thaily_fotografia
+                <i className="fa-brands fa-facebook"></i>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61560249990121&locale=pt_BR]"
+                  className={c.a}
+                >
+                  &nbsp; thaily_fotografia
+                </a>
               </li>
               <li>
-                <i className="fa-brands fa-youtube"></i> thaily_fotografia
+                <i className="fa-brands fa-youtube"></i>
+                <a
+                  href="https://www.youtube.com/@thailyfotografa"
+                  className={c.a}
+                >
+                  &nbsp; thaily_fotografia
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      {/* <span className={c.line}></span> */}
       <div className={c.line}></div>
       <div className={c.direitos}>
         <div>©2025 All Rights Reserved.</div>

@@ -45,7 +45,7 @@
 
   {
     "pasta": "gomes",
-    "categoria": "ensaio",
+    "categoria": "casamento",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/2.jpeg",
@@ -66,7 +66,7 @@
   },
   {
     "pasta": "marina-natal",
-    "categoria": "outro",
+    "categoria": "infantil",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/marina-natal/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/marina-natal/2.jpeg",

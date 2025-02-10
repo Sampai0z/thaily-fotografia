@@ -6,10 +6,10 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Ensaios() {
   const [categoriaFilter, setCategoriaFilter] = useState("ensaio");
-  const [showFotos, setShowFotos] = useState(false); // Estado para controlar o tempo de espera
-  const [selectedImage, setSelectedImage] = useState(null); // Estado para armazenar a imagem selecionada para exibir no modal
+  const [showFotos, setShowFotos] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  console.log(categoriaFilter);
 
-  // Filtro dinâmico com base na categoria selecionada
   const fotosFilter =
     categoriaFilter === "todos"
       ? fotos
@@ -18,49 +18,39 @@ export default function Ensaios() {
             pasta.categoria && pasta.categoria.toLowerCase() === categoriaFilter
         );
 
-  // Função para mudar o filtro
   const handleFilterChange = (categoria) => {
     setCategoriaFilter(categoria.toLowerCase());
   };
 
-  // Espera 5 segundos antes de mostrar as fotos
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowFotos(true); // Após 5 segundos, mostrar as fotos
-    }, 5000);
+      setShowFotos(true);
+    }, 1000);
 
-    // Limpa o timer quando o componente for desmontado
     return () => clearTimeout(timer);
-  }, []); // Este useEffect será executado apenas uma vez, quando o componente for montado
+  }, []);
 
-  // Função para abrir o modal com a imagem clicada
   const openModal = (imageUrl) => {
-    setSelectedImage(imageUrl); // Armazena a URL da imagem no estado
+    setSelectedImage(imageUrl);
   };
 
-  // Função para fechar o modal
   const closeModal = () => {
-    setSelectedImage(null); // Reseta o estado, fechando o modal
+    setSelectedImage(null);
   };
 
   return (
     <div>
       <h1>Imagens</h1>
 
-      {/* Botões para mudar a categoria do filtro */}
       <div>
         <button onClick={() => handleFilterChange("ensaio")}>Ensaio</button>
-        <button onClick={() => handleFilterChange("casamento")}>
-          Casamento
+        <button onClick={() => handleFilterChange("infantil")}>
+          Ensaio Infantil
         </button>
-        <button onClick={() => handleFilterChange("outro")}>Outro</button>
-        <button onClick={() => handleFilterChange("todos")}>Todos</button>
       </div>
 
-      {/* Exibe um texto enquanto espera 5 segundos */}
       {!showFotos && <CircularProgress />}
 
-      {/* Exibindo as imagens filtradas após 5 segundos */}
       {showFotos && fotosFilter.length > 0
         ? fotosFilter.map((pasta, index) => (
             <div key={pasta.id || index} className={c.containerImagens}>
@@ -74,7 +64,7 @@ export default function Ensaios() {
                       src={link}
                       alt={`Imagem ${idx + 1} de ${pasta.pasta}`}
                       className={c.fotos}
-                      onClick={() => openModal(link)} // Chama a função para abrir o modal
+                      onClick={() => openModal(link)}
                     />
                   ))}
                 </div>

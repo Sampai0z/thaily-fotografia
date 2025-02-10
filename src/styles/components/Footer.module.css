@@ -30,6 +30,7 @@
 .pages ul {
   list-style: none;
 }
+
 .link {
   color: white;
   text-decoration: none;
@@ -47,7 +48,11 @@
   padding: 20px;
   background-color: #353742;
 }
-
+.a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
 @media (max-width: 689px) {
   .contatoListaDiv {
     flex-direction: column;
