@@ -12,7 +12,9 @@ export default function Ensaios() {
   // Filtro dinâmico com base na categoria selecionada
   const fotosFilter =
     categoriaFilter === "casamento"
-      ? fotos.categoria=="prewedding" || fotos.categoria=="casamento" || fotos.categoria=="aniversario"
+      ? fotos.categoria == "prewedding" ||
+        fotos.categoria == "casamento" ||
+        fotos.categoria == "aniversario"
       : fotos.filter(
           (pasta) =>
             pasta.categoria && pasta.categoria.toLowerCase() === categoriaFilter
@@ -47,19 +49,29 @@ export default function Ensaios() {
     <div>
       {/* Botões para mudar a categoria do filtro */}
       <div className={c.subMenu}>
-        <button onClick={() => handleFilterChange("aniversario")}>Aniversário</button>
-        <button onClick={() => handleFilterChange("casamento")}>Casamento</button>
-        <button onClick={() => handleFilterChange("prewedding")}>Pré-Weeding</button>
+        <button onClick={() => handleFilterChange("aniversario")}>
+          Aniversário
+        </button>
+        <button onClick={() => handleFilterChange("casamento")}>
+          Casamento
+        </button>
+        <button onClick={() => handleFilterChange("prewedding")}>
+          Pré-Weeding
+        </button>
       </div>
 
-      {/* Exibe um texto enquanto espera 5 segundos */}
-      {!showFotos && <CircularProgress />}
+      {!showFotos && (
+        <div className={c.circularProgress}>
+          <CircularProgress />
+        </div>
+      )}
 
-      {/* Exibindo as imagens filtradas após 5 segundos */}
       {showFotos && fotosFilter.length > 0
         ? fotosFilter.map((pasta, index) => (
             <div key={pasta.id || index} className={c.containerImagens}>
-              <span className={c.nomePasta}>{pasta.pasta.replace(/-/g, " ")}</span>
+              <span className={c.nomePasta}>
+                {pasta.pasta.replace(/-/g, " ")}
+              </span>
 
               {pasta.arquivos.length > 0 ? (
                 <div className={c.galeria}>

@@ -39,15 +39,24 @@ export default function Ensaios() {
   };
 
   return (
-    <div>
-      <div>
-        <button onClick={() => handleFilterChange("ensaio")}>Ensaio</button>
+    <>
+      <div className={c.subMenu}>
+        <button
+          onClick={() => handleFilterChange("ensaio")}
+          className={c.letra}
+        >
+          Ensaio
+        </button>
         <button onClick={() => handleFilterChange("infantil")}>
           Ensaio Infantil
         </button>
       </div>
 
-      {!showFotos && <CircularProgress />}
+      {!showFotos && (
+        <div className={c.circularProgress}>
+          <CircularProgress />
+        </div>
+      )}
 
       {showFotos && fotosFilter.length > 0
         ? fotosFilter.map((pasta, index) => (
@@ -64,6 +73,7 @@ export default function Ensaios() {
                       src={link}
                       alt={`Imagem ${idx + 1} de ${pasta.pasta}`}
                       className={c.fotos}
+                      loading="lazy"
                       onClick={() => openModal(link)}
                     />
                   ))}
@@ -94,6 +104,6 @@ export default function Ensaios() {
           </Button>
         </DialogActions>
       </Dialog>
-    </div>
+    </>
   );
 }
