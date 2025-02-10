@@ -1,6 +1,7 @@
 [
   {
     "pasta": "gabriel-moreno",
+    "categoria": "ensaio",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/2.jpeg",
@@ -44,6 +45,7 @@
 
   {
     "pasta": "gomes",
+    "categoria": "ensaio",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/2.jpeg",
@@ -64,6 +66,7 @@
   },
   {
     "pasta": "marina-natal",
+    "categoria": "outro",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/marina-natal/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/marina-natal/2.jpeg",
@@ -93,6 +96,7 @@
   },
   {
     "pasta": "nat-e-gui",
+    "categoria": "outro",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/nat-e-gui/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/nat-e-gui/2.jpeg",
@@ -154,6 +158,7 @@
   },
   {
     "pasta": "niver",
+    "categoria": "outro",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/niver/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/niver/2.jpeg",
@@ -232,6 +237,7 @@
   },
   {
     "pasta": "pamella",
+    "categoria": "outro",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/pamella/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/pamella/2.jpeg",
@@ -286,6 +292,7 @@
   },
   {
     "pasta": "paulinho",
+    "categoria": "outro",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/paulino/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/paulino/2.jpeg",
@@ -330,6 +337,7 @@
   },
   {
     "pasta": "casamento-vitoria-e-lucas",
+    "categoria": "outro",
     "arquivos": []
   }
 ]
