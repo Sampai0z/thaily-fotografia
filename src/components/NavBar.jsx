@@ -36,7 +36,7 @@ export default function NavBar() {
         <ul className={c.navBar}>
           <li>
             <Link to="/" className={c.link}>
-              Home
+              Início
             </Link>
           </li>
           <li>
@@ -50,8 +50,8 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="#" className={c.link}>
-              Sobre?
+            <Link to="/sobre" className={c.link}>
+              Sobre
             </Link>
           </li>
         </ul>
