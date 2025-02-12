@@ -47,7 +47,7 @@ export default function Ensaios() {
         >
           Ensaio
         </button>
-        <button onClick={() => handleFilterChange("infantil")}>
+        <button onClick={() => handleFilterChange("infantil")} className={c.letra}>
           Ensaio Infantil
         </button>
       </div>

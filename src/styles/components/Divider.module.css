@@ -2,7 +2,6 @@
   width: 100vw;
   height: 10vh;
   display: flex;
-  margin: 20px;
   justify-content: space-evenly;
   align-items: center;
   font-size: 1.75rem;
@@ -13,4 +12,43 @@
   width: 25%;
   height: 3px;
   background-color: #9b82cf;
+}
+
+@media (max-width: 768px) {
+
+  .titleworks {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #7960ae;
+  }
+  
+  .titleworks hr {
+    width: 15%;
+    height: 3px;
+    background-color: #9b82cf;
+  }
+
+}
+@media (max-width: 480px) {
+
+  .titleworks {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #7960ae;
+  }
+  
+  .titleworks hr {
+    width: 15%;
+    height: 3px;
+    background-color: #9b82cf;
+  }
+
 }

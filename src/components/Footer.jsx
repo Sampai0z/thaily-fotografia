@@ -11,18 +11,18 @@ export default function Footer() {
         </div>
         <div className={c.pages}>
           <ul>
-            <li>
+            <li >
               <Link to="/" className={c.link}>
                 INICIO
               </Link>
             </li>
             <li>
               <Link to="/ensaios" className={c.link}>
-                TRABALHOS
+                ENSAIOS
               </Link>
             </li>
             <li>
-              <Link to="#" className={c.link}>
+              <Link to="/sobre" className={c.link}>
                 SOBRE
               </Link>
             </li>

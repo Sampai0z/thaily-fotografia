@@ -86,11 +86,11 @@ export default function NavBar() {
                 Eventos
               </Link>
               <Link
-                to="/contact-me"
+                to="/sobre"
                 className={c.link_responsive}
                 onClick={toggleAll}
               >
-                Contact
+                Sobre
               </Link>
               <Backdrop
                 sx={{
