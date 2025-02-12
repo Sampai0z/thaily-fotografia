@@ -1,19 +1,23 @@
 // import { Quote } from "lucide-react";
 import c from "../styles/components/Depoimentos.module.css";
+import Rating from "@mui/material/Rating";
 
 export default function Depoimentos() {
   const testimonials = [
     {
       text: "Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.",
       author: "CÉLIA ALMEIDA",
+      value: 4.5,
     },
     {
       text: "Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.",
       author: "FRANK KINNEY",
+      value: 4,
     },
     {
       text: "Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.",
       author: "CASAR COM LARSON",
+      value: 5,
     },
   ];
 
@@ -35,6 +39,12 @@ export default function Depoimentos() {
             {/* <Quote className={c.icon} /> */}
             <p className={c.testimonialText}>{testimonial.text}</p>
             <p className={c.author}>{testimonial.author}</p>
+            <Rating
+              name="read-only"
+              value={testimonial.value}
+              precision={0.5}
+              readOnly
+            />
           </div>
         ))}
       </div>
