@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+  border-bottom: 2px solid #7960ae;
 }
 .header img {
   width: 110px;
@@ -15,7 +16,7 @@
   justify-content: right;
   font-size: 25px;
   margin-right: 10px;
-  color: rgb(87, 48, 140);
+  color: #7960ae;
 }
 .link {
   text-decoration: none;

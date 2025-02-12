@@ -44,8 +44,8 @@
   },
 
   {
-    "pasta": "gomes",
-    "categoria": "casamento",
+    "pasta": "Gomes",
+    "categoria": "ensaio",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/2.jpeg",
@@ -195,7 +195,7 @@
     ]
   },
   {
-    "pasta": "Pre wedding",
+    "pasta": "Pre-wedding",
     "categoria": "prewedding",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/nat-e-gui/1.jpeg",

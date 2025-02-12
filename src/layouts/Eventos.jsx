@@ -11,7 +11,7 @@ export default function Eventos() {
 
   // Filtro dinâmico com base na categoria selecionada
   const fotosFilter =
-    categoriaFilter === "casamento"
+    categoriaFilter === "todos"
       ? fotos.categoria == "prewedding" ||
         fotos.categoria == "casamento" ||
         fotos.categoria == "aniversario"
@@ -49,13 +49,13 @@ export default function Eventos() {
     <div>
       {/* Botões para mudar a categoria do filtro */}
       <div className={c.subMenu}>
-        <button onClick={() => handleFilterChange("aniversario")}>
+        <button onClick={() => handleFilterChange("aniversario")} className={`${categoriaFilter === 'aniversario' ? c.ativo : "" }`}>
           Aniversário
         </button>
-        <button onClick={() => handleFilterChange("casamento")}>
+        <button onClick={() => handleFilterChange("casamento")} className={`${categoriaFilter === 'casamento' ? c.ativo : "" }`}>
           Casamento
         </button>
-        <button onClick={() => handleFilterChange("prewedding")}>
+        <button onClick={() => handleFilterChange("prewedding")} className={`${categoriaFilter === 'prewedding' ? c.ativo : "" }`}>
           Pré-Weeding
         </button>
       </div>

@@ -41,10 +41,7 @@ export default function SlideEnsaios() {
                 index === currentIndex ? c.active : c.inactive
               }`}
             >
-              <a className={c.vermais} href={`#`}>
-                Ver mais
-              </a>
-              <img src={image.src} alt={image.alt} />
+              <img src={image.src} alt={image.alt}/>
             </div>
           ))}
         </div>

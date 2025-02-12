@@ -2,7 +2,7 @@
     position: relative;
     max-width: 60vw;
     height: 60vh;
-    padding: 1rem 0rem;
+    margin: 1vh 0rem;
     left: 50%;
     transform: translateX(-50%);
     background-color: #F5F5F5;

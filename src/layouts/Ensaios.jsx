@@ -63,13 +63,13 @@ export default function Ensaios() {
       <div className={c.subMenu}>
         <button
           onClick={() => handleFilterChange("ensaio")}
-          className={c.letra}
+          className={`${categoriaFilter === 'ensaio' ? c.ativo : "" }`}
         >
           Ensaio
         </button>
         <button
           onClick={() => handleFilterChange("infantil")}
-          className={c.letra}
+          className={`${categoriaFilter === 'infantil' ? c.ativo : "" }`}
         >
           Ensaio Infantil
         </button>

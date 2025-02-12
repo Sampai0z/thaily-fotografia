@@ -19,14 +19,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/ensaios" element={<Ensaios />} />
             <Route path="/eventos" element={<Eventos />} />
-            <Route
-              path="/sobre"
-              element={
-                <main className="mainSobre">
-                  <Sobre />
-                </main>
-              }
-            />
+            <Route path="/sobre" element={<Sobre /> } />
           </Routes>
           <Footer />
         </BrowserRouter>
