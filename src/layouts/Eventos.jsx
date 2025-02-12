@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import fotos from "../assets/fotos.json"; // Importando o arquivo JSON
 import c from "../styles/layouts/Ensaios.module.css";
 import { Dialog, DialogActions, DialogContent, Button } from "@mui/material";
@@ -6,48 +6,72 @@ import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Eventos() {
   const [categoriaFilter, setCategoriaFilter] = useState("aniversario");
-  const [showFotos, setShowFotos] = useState(false); // Estado para controlar o tempo de espera
-  const [selectedImage, setSelectedImage] = useState(null); // Estado para armazenar a imagem selecionada para exibir no modal
+  const [showFotos, setShowFotos] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  // Estado para controlar quantas fotos exibir por pasta (chave = índice da pasta)
+  const [visiblePhotos, setVisiblePhotos] = useState({});
 
-  // Filtro dinâmico com base na categoria selecionada
-  const fotosFilter =
-    categoriaFilter === "casamento"
-      ? fotos.categoria == "prewedding" ||
-        fotos.categoria == "casamento" ||
-        fotos.categoria == "aniversario"
+  // Filtra as pastas com base na categoria selecionada.
+  // Se for "casamento", exibe as pastas cuja categoria for prewedding, casamento ou aniversario.
+  const fotosFilter = useMemo(() => {
+    return categoriaFilter === "casamento"
+      ? fotos.filter(
+          (pasta) =>
+            pasta.categoria &&
+            ["prewedding", "casamento", "aniversario"].includes(
+              pasta.categoria.toLowerCase()
+            )
+        )
       : fotos.filter(
           (pasta) =>
             pasta.categoria && pasta.categoria.toLowerCase() === categoriaFilter
         );
+  }, [categoriaFilter]);
 
-  // Função para mudar o filtro
+  // Sempre que o filtro (ou o resultado filtrado) mudar,
+  // inicializa o estado de quantas imagens serão exibidas por pasta com 10.
+  useEffect(() => {
+    const initialVisible = {};
+    fotosFilter.forEach((pasta, i) => {
+      initialVisible[i] = 15;
+    });
+    setVisiblePhotos(initialVisible);
+  }, [categoriaFilter, fotosFilter]);
+
+  // Simula um carregamento de 1 segundo antes de exibir as fotos
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowFotos(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Abre o modal exibindo a imagem clicada
+  const openModal = (imageUrl) => {
+    setSelectedImage(imageUrl);
+  };
+
+  // Fecha o modal
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  // Atualiza o número de fotos visíveis para a pasta (exibe todas as imagens)
+  const loadMorePhotos = (index, totalPhotos) => {
+    setVisiblePhotos((prev) => ({
+      ...prev,
+      [index]: totalPhotos,
+    }));
+  };
+
+  // Altera o filtro (categoria)
   const handleFilterChange = (categoria) => {
     setCategoriaFilter(categoria.toLowerCase());
   };
 
-  // Espera 1 segundos antes de mostrar as fotos
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowFotos(true); // Após 1 segundos, mostrar as fotos
-    }, 1000);
-
-    // Limpa o timer quando o componente for desmontado
-    return () => clearTimeout(timer);
-  }, []); // Este useEffect será executado apenas uma vez, quando o componente for montado
-
-  // Função para abrir o modal com a imagem clicada
-  const openModal = (imageUrl) => {
-    setSelectedImage(imageUrl); // Armazena a URL da imagem no estado
-  };
-
-  // Função para fechar o modal
-  const closeModal = () => {
-    setSelectedImage(null); // Reseta o estado, fechando o modal
-  };
-
   return (
     <div>
-      {/* Botões para mudar a categoria do filtro */}
+      {/* Botões para alterar o filtro */}
       <div className={c.subMenu}>
         <button onClick={() => handleFilterChange("aniversario")}>
           Aniversário
@@ -60,43 +84,58 @@ export default function Eventos() {
         </button>
       </div>
 
+      {/* Enquanto as fotos não são exibidas, mostra um loading */}
       {!showFotos && (
         <div className={c.circularProgress}>
           <CircularProgress />
         </div>
       )}
 
-      {showFotos && fotosFilter.length > 0
-        ? fotosFilter.map((pasta, index) => (
-            <div key={pasta.id || index} className={c.containerImagens}>
-              <span className={c.nomePasta}>
-                {pasta.pasta.replace(/-/g, " ")}
-              </span>
+      {/* Exibe as pastas filtradas */}
+      {showFotos && fotosFilter.length > 0 ? (
+        fotosFilter.map((pasta, index) => (
+          <div key={pasta.id || index} className={c.containerImagens}>
+            <span className={c.nomePasta}>
+              {pasta.pasta.replace(/-/g, " ")}
+            </span>
 
-              {pasta.arquivos.length > 0 ? (
+            {pasta.arquivos.length > 0 ? (
+              <>
                 <div className={c.galeria}>
-                  {pasta.arquivos.map((link, idx) => (
-                    <img
-                      key={idx}
-                      src={link}
-                      alt={`Imagem ${idx + 1} de ${pasta.pasta}`}
-                      className={c.fotos}
-                      onClick={() => openModal(link)} // Chama a função para abrir o modal
-                    />
-                  ))}
+                  {pasta.arquivos
+                    .slice(0, visiblePhotos[index] || 15)
+                    .map((link, idx) => (
+                      <img
+                        key={idx}
+                        src={link}
+                        alt={`Imagem ${idx + 1} de ${pasta.pasta}`}
+                        className={c.fotos}
+                        onClick={() => openModal(link)}
+                      />
+                    ))}
                 </div>
-              ) : (
-                <p>Sem imagens disponíveis</p>
-              )}
-            </div>
-          ))
-        : showFotos && (
-            <p>
-              Nenhuma imagem encontrada para a categoria &quot;{categoriaFilter}
-              &quot;.
-            </p>
-          )}
+                {/* Se ainda houver fotos para exibir, mostra o botão "Carregar mais" */}
+                {visiblePhotos[index] < pasta.arquivos.length && (
+                  <Button
+                    onClick={() => loadMorePhotos(index, pasta.arquivos.length)}
+                  >
+                    Carregar mais
+                  </Button>
+                )}
+              </>
+            ) : (
+              <p>Sem imagens disponíveis</p>
+            )}
+          </div>
+        ))
+      ) : showFotos ? (
+        <p>
+          Nenhuma imagem encontrada para a categoria &quot;{categoriaFilter}
+          &quot;.
+        </p>
+      ) : null}
 
+      {/* Modal para exibir a imagem em destaque */}
       <Dialog open={selectedImage !== null} onClose={closeModal}>
         <DialogContent>
           <img
