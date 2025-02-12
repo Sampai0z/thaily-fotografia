@@ -5,7 +5,7 @@ import { Dialog, DialogActions, DialogContent, Button } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
 
 export default function Eventos() {
-  const [categoriaFilter, setCategoriaFilter] = useState("prewedding");
+  const [categoriaFilter, setCategoriaFilter] = useState("aniversario");
   const [showFotos, setShowFotos] = useState(false); // Estado para controlar o tempo de espera
   const [selectedImage, setSelectedImage] = useState(null); // Estado para armazenar a imagem selecionada para exibir no modal
 

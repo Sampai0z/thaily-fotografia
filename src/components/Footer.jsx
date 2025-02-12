@@ -7,7 +7,9 @@ export default function Footer() {
     <footer className={c.footer}>
       <div className={c.footer_content}>
         <div>
-          <img src={logo} alt="Thaily Fotografia Logo" className={c.image} />
+          <Link to="/">
+            <img src={logo} alt="Thaily Fotografia Logo" className={c.image} />
+          </Link>
         </div>
         <div className={c.pages}>
           <ul>
@@ -18,7 +20,12 @@ export default function Footer() {
             </li>
             <li>
               <Link to="/ensaios" className={c.link}>
-                TRABALHOS
+                ENSAIOS
+              </Link>
+            </li>
+            <li>
+              <Link to="/eventos" className={c.link}>
+                EVENTOS
               </Link>
             </li>
             <li>

@@ -6,18 +6,27 @@ import Ensaios from "./layouts/Ensaios.jsx";
 import Eventos from "./layouts/Eventos.jsx";
 import Footer from "./components/Footer.jsx";
 import Sobre from "./layouts/Sobre.jsx";
+import ScrollToTop from "./components/ScrollTo.jsx";
 
 function App() {
   return (
     <>
       <div>
         <BrowserRouter>
-          <NavBar src="inicio" />
+          <NavBar />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/ensaios" element={<Ensaios />} />
             <Route path="/eventos" element={<Eventos />} />
-            <Route path="/sobre" element={<main className="mainSobre"><Sobre /></main>} />
+            <Route
+              path="/sobre"
+              element={
+                <main className="mainSobre">
+                  <Sobre />
+                </main>
+              }
+            />
           </Routes>
           <Footer />
         </BrowserRouter>
