@@ -75,4 +75,7 @@
   .contato h2 {
     margin: 0;
   }
+  .footer {
+    top: 0;
+  }
 }
