@@ -1,4 +1,7 @@
 .footer {
+  position: relative;
+  top: 16vh;
+  width: 100%;
   margin-top: auto;
   background-color: rgb(0, 0, 0);
   color: white;
@@ -71,5 +74,8 @@
 
   .contato h2 {
     margin: 0;
+  }
+  .footer {
+    top: 0;
   }
 }

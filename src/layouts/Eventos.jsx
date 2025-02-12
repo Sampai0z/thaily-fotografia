@@ -14,7 +14,7 @@ export default function Eventos() {
   // Filtra as pastas com base na categoria selecionada.
   // Se for "casamento", exibe as pastas cuja categoria for prewedding, casamento ou aniversario.
   const fotosFilter = useMemo(() => {
-    return categoriaFilter === "casamento"
+    return categoriaFilter === "todos"
       ? fotos.filter(
           (pasta) =>
             pasta.categoria &&
