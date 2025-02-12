@@ -27,6 +27,19 @@ export default function SlideEnsaios() {
     });
   };
 
+  function Trabalhos(caminho){
+    const eventos = ["Pre_Wedding", "Selamento", "Aniversário"];
+    const ensaios = ["Ensaio Feminino", "Ensaio Masculino", "Ensaio Infantil"];
+
+    if (eventos.includes(caminho)) {
+      window.location.href = '/eventos';
+    } else if (ensaios.includes(caminho)) {
+      window.location.href = '/ensaios';
+    } else {
+      console.error('Caminho não reconhecido:', caminho);
+    }
+  }
+
   return (
     <>
       <div className={c.sliderContainer}>
@@ -41,7 +54,7 @@ export default function SlideEnsaios() {
                 index === currentIndex ? c.active : c.inactive
               }`}
             >
-              <img src={image.src} alt={image.alt}/>
+              <img src={image.src} alt={image.alt} onClick={() => Trabalhos(image.alt)}/>
             </div>
           ))}
         </div>

@@ -118,6 +118,7 @@ export default function Eventos() {
                 {visiblePhotos[index] < pasta.arquivos.length && (
                   <Button
                     onClick={() => loadMorePhotos(index, pasta.arquivos.length)}
+                    style={{color:'#8a51bf'}}
                   >
                     Carregar mais
                   </Button>
