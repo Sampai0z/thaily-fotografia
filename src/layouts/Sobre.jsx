@@ -5,6 +5,7 @@ import detail1 from "/detalheSobre.png";
 export default function Sobre() {
   return (
     <>
+      <div></div>
       <main className={c.Container}>
         <div className={c.foto}>
           <img src={Thaily} alt="" />
