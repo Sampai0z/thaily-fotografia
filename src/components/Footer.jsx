@@ -41,23 +41,32 @@ export default function Footer() {
             <ul className={c.contatoLista}>
               <li>
                 <i className="fa-brands fa-whatsapp"></i>
-                <a href="#" className={c.a}>
+                <a
+                  href="https://wa.me/5511948413121"
+                  className={c.a}
+                  target="_blank"
+                >
                   &nbsp; (12)93456-7890
                 </a>
               </li>
               <li>
                 <i className="fa-brands fa-instagram"></i>
-                <a href="#" className={c.a}>
+                <a
+                  href="https://www.instagram.com/thaily_fotografia/"
+                  className={c.a}
+                  target="_blank"
+                >
                   &nbsp; thaily_fotografia
                 </a>
               </li>
             </ul>
             <ul className={c.contatoLista}>
               <li>
-                <i className="fa-brands fa-facebook"></i>
+                <i className="fa-brands fa-facebook "></i>
                 <a
                   href="https://www.facebook.com/profile.php?id=61560249990121&locale=pt_BR]"
                   className={c.a}
+                  target="_blank"
                 >
                   &nbsp; thaily_fotografia
                 </a>
@@ -67,6 +76,7 @@ export default function Footer() {
                 <a
                   href="https://www.youtube.com/@thailyfotografa"
                   className={c.a}
+                  target="_blank"
                 >
                   &nbsp; thaily_fotografia
                 </a>

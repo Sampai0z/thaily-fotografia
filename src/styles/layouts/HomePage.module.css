@@ -21,6 +21,7 @@
   font-size: 2rem;
   text-shadow: 2px 2px 3px black;
 }
+
 .bannerButton {
   background-color: #8a63bf;
   color: #eee;
@@ -28,9 +29,30 @@
   padding: 10px;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+.bannerButton:hover {
+  background-color: #7c59ad;
+}
+.bannerButton a {
+  text-decoration: none;
+  color: #eee;
 }
 
-@media (max-width: 666px) {
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-width: 747px) {
   .bannerText {
     color: white;
     margin-top: 20%;
@@ -42,5 +64,6 @@
     padding: 10px;
     border-radius: 50px;
     border: none;
+    animation: none;
   }
 }

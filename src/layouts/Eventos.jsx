@@ -73,13 +73,22 @@ export default function Eventos() {
     <div>
       {/* Botões para alterar o filtro */}
       <div className={c.subMenu}>
-        <button onClick={() => handleFilterChange("aniversario")} className={`${categoriaFilter === 'aniversario' ? c.ativo : "" }`}>
+        <button
+          onClick={() => handleFilterChange("aniversario")}
+          className={`${categoriaFilter === "aniversario" ? c.ativo : ""}`}
+        >
           Aniversário
         </button>
-        <button onClick={() => handleFilterChange("casamento")} className={`${categoriaFilter === 'casamento' ? c.ativo : "" }`}>
+        <button
+          onClick={() => handleFilterChange("casamento")}
+          className={`${categoriaFilter === "casamento" ? c.ativo : ""}`}
+        >
           Casamento
         </button>
-        <button onClick={() => handleFilterChange("prewedding")} className={`${categoriaFilter === 'prewedding' ? c.ativo : "" }`}>
+        <button
+          onClick={() => handleFilterChange("prewedding")}
+          className={`${categoriaFilter === "prewedding" ? c.ativo : ""}`}
+        >
           Pré-Weeding
         </button>
       </div>
@@ -118,7 +127,7 @@ export default function Eventos() {
                 {visiblePhotos[index] < pasta.arquivos.length && (
                   <Button
                     onClick={() => loadMorePhotos(index, pasta.arquivos.length)}
-                    style={{color:'#8a51bf'}}
+                    style={{ color: "#8a51bf" }}
                   >
                     Carregar mais
                   </Button>

@@ -30,11 +30,10 @@
   align-content: center;
   justify-content: right;
   flex-direction: column;
-
 }
 .hamburguer {
   top: 50%;
-  background-color: #BDA4EF;
+  background-color: #bda4ef;
 
   position: absolute;
   transition: 0.5s;

@@ -9,7 +9,11 @@ export default function BannerComponent() {
         <p className={c.bannerText}>
           Colecionando momentos e eternizando memórias
         </p>
-        <button className={c.bannerButton}>Contate-me</button>
+        <a href="https://wa.me/5511948413121" target="_blank" className={c.a}>
+          <button className={c.bannerButton}>
+            Contate-me &nbsp;<i className="fa-brands fa-whatsapp"></i>
+          </button>
+        </a>
       </div>
     </div>
   );
