@@ -7,9 +7,9 @@ export default function HomePage() {
   return (
     <>
       <BannerComponent />
-      <Divider text="ALGUNS TRABALHOS" />
+      <Divider text="TRABALHOS RECENTES" />
       <SlideEnsaios />
-      <Divider text="DEPOIMENTOS" />
+      <Divider text="EXPERIÊNCIAS" />
       <Depoimentos />
     </>
   );

@@ -1,14 +1,17 @@
-import { useState, useEffect, useMemo } from "react";
-import fotos from "../assets/fotos.json"; // Importando o arquivo JSON
 import c from "../styles/layouts/Ensaios.module.css";
+import fotos from "../assets/fotos.json";
+import { useState, useEffect, useMemo } from "react";
 import { Dialog, DialogActions, DialogContent, Button } from "@mui/material";
 import CircularProgress from "@mui/material/CircularProgress";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Ensaios() {
   const [categoriaFilter, setCategoriaFilter] = useState("ensaio");
   const [showFotos, setShowFotos] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const [visiblePhotos, setVisiblePhotos] = useState({});
+  const { id } = useParams();
 
   const fotosFilter = useMemo(() => {
     return categoriaFilter === "todos"
@@ -25,19 +28,20 @@ export default function Ensaios() {
   }, [categoriaFilter]);
 
   useEffect(() => {
+    setCategoriaFilter(id);
+    const timer = setTimeout(() => {
+      setShowFotos(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [id]);
+
+  useEffect(() => {
     const initialVisible = {};
     fotosFilter.forEach((pasta, i) => {
       initialVisible[i] = 10;
     });
     setVisiblePhotos(initialVisible);
   }, [categoriaFilter, fotosFilter]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowFotos(true);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const openModal = (imageUrl) => {
     setSelectedImage(imageUrl);
@@ -54,26 +58,27 @@ export default function Ensaios() {
     }));
   };
 
-  const handleFilterChange = (categoria) => {
-    setCategoriaFilter(categoria.toLowerCase());
-  };
-
   return (
     <>
-      <div className={c.subMenu}>
+      <h2>The id is: {id}</h2>
+      {/* <div className={c.subMenu}>
         <button
           onClick={() => handleFilterChange("ensaio")}
-          className={`${categoriaFilter === 'ensaio' ? c.ativo : "" }`}
+          className={`${categoriaFilter === "ensaio" ? c.ativo : ""}`}
         >
           Ensaio
         </button>
         <button
           onClick={() => handleFilterChange("infantil")}
-          className={`${categoriaFilter === 'infantil' ? c.ativo : "" }`}
+          className={`${categoriaFilter === "infantil" ? c.ativo : ""}`}
         >
           Ensaio Infantil
         </button>
-      </div>
+      </div> */}
+
+      <Button>
+        <Link to="/trabalhos">Voltar</Link>
+      </Button>
 
       {!showFotos && (
         <div className={c.circularProgress}>
@@ -83,39 +88,47 @@ export default function Ensaios() {
 
       {showFotos && fotosFilter.length > 0 ? (
         fotosFilter.map((pasta, index) => (
-          <div key={pasta.id || index} className={c.containerImagens}>
+          <div key={pasta.id || index}>
+            <div className={c.banner}>
+              <img src={pasta.banner} alt={pasta.alt} />
+            </div>
             <span className={c.nomePasta}>
-              {pasta.pasta.replace(/-/g, " ")}
+              <p>{pasta.pasta.replace(/-/g, " ")}</p>
+              <h1>{pasta.tipo.replace(/-/g, " ")}</h1>
             </span>
 
-            {pasta.arquivos.length > 0 ? (
-              <>
-                <div className={c.galeria}>
-                  {pasta.arquivos
-                    .slice(0, visiblePhotos[index] || 10)
-                    .map((link, idx) => (
-                      <img
-                        key={idx}
-                        src={link}
-                        alt={`Imagem ${idx + 1} de ${pasta.pasta}`}
-                        className={c.fotos}
-                        loading="lazy"
-                        onClick={() => openModal(link)}
-                      />
-                    ))}
-                </div>
-                {visiblePhotos[index] < pasta.arquivos.length && (
-                  <Button
-                    onClick={() => loadMorePhotos(index, pasta.arquivos.length)}
-                    style={{color:'#8a51bf'}}
-                  >
-                    Carregar mais
-                  </Button>
-                )}
-              </>
-            ) : (
-              <p>Sem imagens disponíveis</p>
-            )}
+            <div className={c.containerImagens}>
+              {pasta.arquivos.length > 0 ? (
+                <>
+                  <div className={c.galeria}>
+                    {pasta.arquivos
+                      .slice(0, visiblePhotos[index] || 10)
+                      .map((link, idx) => (
+                        <img
+                          key={idx}
+                          src={link}
+                          alt={`Imagem ${idx + 1} de ${pasta.pasta}`}
+                          className={c.fotos}
+                          loading="lazy"
+                          onClick={() => openModal(link)}
+                        />
+                      ))}
+                  </div>
+                  {visiblePhotos[index] < pasta.arquivos.length && (
+                    <Button
+                      onClick={() =>
+                        loadMorePhotos(index, pasta.arquivos.length)
+                      }
+                      style={{ color: "#8a51bf" }}
+                    >
+                      Carregar mais
+                    </Button>
+                  )}
+                </>
+              ) : (
+                <p>Sem imagens disponíveis</p>
+              )}
+            </div>
           </div>
         ))
       ) : showFotos ? (

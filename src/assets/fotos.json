@@ -1,7 +1,10 @@
 [
   {
-    "pasta": "Pré-Missão Masculino",
-    "categoria": "ensaio",
+    "pasta": "Pré Missão  Templo de São Paulo",
+    "tipo": "Ensaio Masculino",
+    "categoria": "gabriel",
+    "banner": "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/22.jpeg",
+    "alt": "Banner ensaio pré Missão",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/2.jpeg",
