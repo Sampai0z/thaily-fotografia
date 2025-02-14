@@ -2,7 +2,6 @@ import BannerComponent from "../components/BannerComponent.jsx";
 import Depoimentos from "../components/Depoimentos.jsx";
 import Divider from "../components/Divider.jsx";
 import SlideEnsaios from "../components/SlideEnsaios.jsx";
-import Sobre from "./Sobre.jsx";
 
 export default function HomePage() {
   return (
@@ -12,8 +11,6 @@ export default function HomePage() {
       <SlideEnsaios />
       <Divider text="DEPOIMENTOS" />
       <Depoimentos />
-      <Divider text="SOBRE MIM" />
-      <Sobre />
     </>
   );
 }

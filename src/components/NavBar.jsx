@@ -50,6 +50,11 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
+            <Link to="#" className={c.link}>
+              Trabalhos
+            </Link>
+          </li>
+          <li>
             <Link to="/sobre" className={c.link}>
               Sobre
             </Link>

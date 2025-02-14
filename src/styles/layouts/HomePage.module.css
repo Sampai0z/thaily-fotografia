@@ -1,11 +1,23 @@
 .box {
   position: relative;
   display: flex;
+  flex-direction: column;
+  /* background-color: #7960ae; */
+  background-color: #8471ad;
 }
 .banner {
   width: 100%;
-  z-index: -1;
 }
+.bannerText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  /* background-color: #8471ad; */
+  font-size: 1.5rem;
+  margin: 10px;
+}
+/*  }
 .bannerBox {
   position: absolute;
   display: flex;
@@ -66,4 +78,4 @@
     border: none;
     animation: none;
   }
-}
+} */

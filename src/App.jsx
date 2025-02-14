@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar.jsx";
 import HomePage from "./layouts/HomePage.jsx";
 import Ensaios from "./layouts/Ensaios.jsx";
+// import Trabalhos from "./layouts/Trabalhos.jsx";
+// import Contato from "./layouts/Contato.jsx";
 import Eventos from "./layouts/Eventos.jsx";
 import Footer from "./components/Footer.jsx";
 import Sobre from "./layouts/Sobre.jsx";
@@ -35,11 +37,14 @@ function App() {
       <div>
         <BrowserRouter>
           <NavBar />
-          <ScrollToTop /> <WhatsAppButton />
+          <ScrollToTop />
+          <WhatsAppButton />
           <Routes>
             <Route path="/" element={<HomePage />} />
+            {/* <Route path="/trabalhos" element={<Trabalhos />} /> */}
             <Route path="/ensaios" element={<Ensaios />} />
             <Route path="/eventos" element={<Eventos />} />
+            {/* <Route path="/contato" element={<Contato />} /> */}
             <Route path="/sobre" element={<Sobre />} />
           </Routes>
           <Footer />
