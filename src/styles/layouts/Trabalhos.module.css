@@ -1,0 +1,60 @@
+.Container{
+
+    width:100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.menu{
+    
+    width: 100%; /*????????????????????????????*/
+    border: 2px solid;
+}
+
+.ContainerFotos{
+    width:80%;
+    height: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.foto{
+
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.3rem;
+}
+
+.foto:hover{
+
+    scale: 0.9;
+    transition: 0.2s ease-out;
+
+}
+
+.foto img{
+
+    width: 20rem;
+    height: 12rem;
+
+}
+
+.titulo{
+
+    padding: 1rem 0rem 0.5rem 0.5rem;
+    font-size: 18px;
+    font-weight: 600
+
+}
+.categoria{
+
+    padding: 0.5rem 0rem 2rem 0.5rem;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #202020;
+
+}

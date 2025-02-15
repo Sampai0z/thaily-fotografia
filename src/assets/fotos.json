@@ -1,10 +1,10 @@
 [
   {
     "pasta": "Pré Missão  Templo de São Paulo",
-    "tipo": "Ensaio Masculino",
     "categoria": "gabriel",
+    "tipo": "Ensaio Masculino",
     "banner": "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/22.jpeg",
-    "alt": "Banner ensaio pré Missão",
+    "alt": "Banner Pré-Missão Masculino 2",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/2.jpeg",
@@ -48,7 +48,10 @@
 
   {
     "pasta": "Gomes",
-    "categoria": "ensaio",
+    "categoria": "ensaio_gomes",
+    "tipo": "Ensaio Feminino",
+    "banner": "",
+    "alt": "Banner Pos-Missão Feminino 2",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gomes/2.jpeg",
@@ -69,7 +72,10 @@
   },
   {
     "pasta": "Pré-Missão Feminino",
-    "categoria": "ensaio",
+    "categoria": "ensaio_pamella",
+    "tipo": "Ensaio Feminino 2",
+    "banner": "",
+    "alt": "Banner Pos-Missão Feminino",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/pamella/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/pamella/2.jpeg",
@@ -124,7 +130,10 @@
   },
   {
     "pasta": "Pós-Missão Masculino",
-    "categoria": "ensaio",
+    "categoria": "ensaio_masculino2",
+    "tipo": "Ensaio Masculino 2",
+    "banner": "",
+    "alt": "Banner Pré-Missão Masculino 2",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/paulino/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/paulino/2.jpeg",
@@ -170,6 +179,9 @@
   {
     "pasta": "Infantil",
     "categoria": "infantil",
+    "tipo": "Ensaio Infantil",
+    "banner": "",
+    "alt": "Banner Infantil",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/marina-natal/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/marina-natal/2.jpeg",
@@ -200,6 +212,9 @@
   {
     "pasta": "Pre-wedding",
     "categoria": "prewedding",
+    "tipo": "Evento Pré-Wedding",
+    "banner": "",
+    "alt": "Banner Pré Wedding",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/nat-e-gui/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/nat-e-gui/2.jpeg",
@@ -260,6 +275,9 @@
   {
     "pasta": "Aniversário",
     "categoria": "aniversario",
+    "tipo": "Evento Aniversário",
+    "banner": "",
+    "alt": "Banner Aniversário",
     "arquivos": [
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/niver/1.jpeg",
       "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/niver/2.jpeg",
@@ -340,8 +358,11 @@
   {
     "pasta": "casamento-vitoria-e-lucas",
     "categoria": "casamento",
+    "tipo": "Evento Casamento",
+    "banner": "",
+    "alt": "Banner Casamento",
     "arquivos": [
-      "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/pamella/1.jpeg"
+      ""
     ]
   }
 ]
