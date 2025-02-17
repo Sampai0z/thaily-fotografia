@@ -19,13 +19,8 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/ensaios" className={c.link}>
-                ENSAIOS
-              </Link>
-            </li>
-            <li>
-              <Link to="/eventos" className={c.link}>
-                EVENTOS
+              <Link to="/trabalhos" className={c.link}>
+                TRABALHOS
               </Link>
             </li>
             <li>

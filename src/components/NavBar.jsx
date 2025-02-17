@@ -40,11 +40,6 @@ export default function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/ensaios" className={c.link}>
-              Ensaios
-            </Link>
-          </li>
-          <li>
             <Link to="/eventos" className={c.link}>
               Eventos
             </Link>
@@ -75,13 +70,6 @@ export default function NavBar() {
             <div className={c.navBar_responsive}>
               <Link to="/" className={c.link_responsive} onClick={toggleAll}>
                 Home
-              </Link>
-              <Link
-                to="/ensaios"
-                className={c.link_responsive}
-                onClick={toggleAll}
-              >
-                Ensaios
               </Link>
               <Link
                 to="/eventos"

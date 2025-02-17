@@ -11,6 +11,7 @@ export default function Sobre() {
           <img src={Thaily} alt="" />
         </div>
         <div className={c.caixaTexto}>
+          <h3>Conheça Thaily</h3>
           <img className={c.detalhe} src={detail1} alt="" />
           <img className={c.detalhe2} src={detail1} alt="" />
           <p>
@@ -23,6 +24,7 @@ export default function Sobre() {
             para conseguir realizar esse sonho de se tornar uma Fotografa
             Profissional.
           </p>
+          <div></div>
         </div>
       </main>
     </>

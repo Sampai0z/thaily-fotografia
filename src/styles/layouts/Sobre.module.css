@@ -26,15 +26,20 @@
   width: 75vw;
   height: auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: left;
-  align-items: center;
-}
-.caixaTexto p {
+  align-items: flex-start;
+  align-content: flex-start;
+  color: #480664;
   padding: 0rem 2.5rem;
+}
+.caixaTexto h3 { width: 100%; display: flex; justify-content: center; font-size: 2rem; }
+.caixaTexto p {
+  position: relative;
   text-align: justify;
   font-size: 1.2rem;
   /* color: #190038; */
-  color: #480664;
+  
 }
 .detalhe {
   position: absolute;
@@ -42,6 +47,7 @@
   right: 0rem;
   width: 25%;
   z-index: -1;
+  opacity: .75;
 }
 .detalhe2 {
   position: absolute;
@@ -49,6 +55,7 @@
   left: 0rem;
   width: 25%;
   z-index: -1;
+  opacity: .75;
   transform: rotate(180deg);
 }
 
