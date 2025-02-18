@@ -39,14 +39,15 @@ export default function NavBar() {
               Início
             </Link>
           </li>
-          <li>
-            <Link to="/eventos" className={c.link}>
-              Eventos
-            </Link>
-          </li>
+
           <li>
             <Link to="Trabalhos" className={c.link}>
               Trabalhos
+            </Link>
+          </li>
+          <li>
+            <Link to="/contato" className={c.link}>
+              Contato
             </Link>
           </li>
           <li>
@@ -72,18 +73,18 @@ export default function NavBar() {
                 Home
               </Link>
               <Link
-                to="/eventos"
-                className={c.link_responsive}
-                onClick={toggleAll}
-              >
-                Eventos
-              </Link>
-              <Link
                 to="/trabalhos"
                 className={c.link_responsive}
                 onClick={toggleAll}
               >
                 Trabalhos
+              </Link>
+              <Link
+                to="/contato"
+                className={c.link_responsive}
+                onClick={toggleAll}
+              >
+                Contato
               </Link>
               <Link
                 to="/sobre"

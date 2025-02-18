@@ -60,22 +60,6 @@ export default function Ensaios() {
 
   return (
     <>
-      <h2>The id is: {id}</h2>
-      {/* <div className={c.subMenu}>
-        <button
-          onClick={() => handleFilterChange("ensaio")}
-          className={`${categoriaFilter === "ensaio" ? c.ativo : ""}`}
-        >
-          Ensaio
-        </button>
-        <button
-          onClick={() => handleFilterChange("infantil")}
-          className={`${categoriaFilter === "infantil" ? c.ativo : ""}`}
-        >
-          Ensaio Infantil
-        </button>
-      </div> */}
-
       <Button>
         <Link to="/trabalhos">Voltar</Link>
       </Button>
