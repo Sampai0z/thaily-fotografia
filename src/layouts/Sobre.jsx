@@ -8,7 +8,7 @@ export default function Sobre() {
       <div></div>
       <main className={c.Container}>
         <div className={c.foto}>
-          <img src={Thaily} alt="" />
+          <img src={Thaily} alt="thaily perfil" />
         </div>
         <div className={c.caixaTexto}>
           <h3>Conheça Thaily</h3>

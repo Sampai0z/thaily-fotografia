@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar.jsx";
 import HomePage from "./layouts/HomePage.jsx";
-import Ensaios from "./layouts/Ensaios.jsx";
+import GaleriaDeFotos from "./layouts/GaleriaDeFotos.jsx";
 import Trabalhos from "./layouts/Trabalhos.jsx";
 import Contato from "./layouts/Contato.jsx";
 import Footer from "./components/Footer.jsx";
@@ -41,7 +41,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/trabalhos" element={<Trabalhos />} />
-            <Route path="/trabalhos/:id" element={<Ensaios />} />
+            <Route path="/trabalhos/:id" element={<GaleriaDeFotos />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/sobre" element={<Sobre />} />
           </Routes>

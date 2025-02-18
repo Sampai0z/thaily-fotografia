@@ -1,4 +1,4 @@
-import c from "../styles/layouts/Ensaios.module.css";
+import c from "../styles/layouts/GaleriaDeFotos.module.css";
 import fotos from "../assets/fotos.json";
 import { useState, useEffect, useMemo } from "react";
 import { Dialog, DialogActions, DialogContent, Button } from "@mui/material";
@@ -6,7 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export default function Ensaios() {
+export default function GaleriaDeFotos() {
   const [categoriaFilter, setCategoriaFilter] = useState("ensaio");
   const [showFotos, setShowFotos] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
