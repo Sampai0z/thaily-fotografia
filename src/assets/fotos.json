@@ -1,6 +1,7 @@
 [
   {
-    "pasta": "Pré Missão  Templo de São Paulo",
+    "pasta": "Pré Missão",
+    "lugar":"Templo de São Paulo",
     "categoria": "gabriel",
     "tipo": "Ensaio Masculino",
     "banner": "https://ilhuuqdlugmuluraghjz.supabase.co/storage/v1/object/public/thaily-fotografia/gabriel-morango/22.jpeg",
@@ -47,7 +48,8 @@
   },
 
   {
-    "pasta": "Gomes",
+    "pasta": "Pós Missão",
+    "lugar":"Templo de Campinas",
     "categoria": "ensaio_gomes",
     "tipo": "Ensaio Feminino",
     "banner": "",
@@ -71,7 +73,8 @@
     ]
   },
   {
-    "pasta": "Pré-Missão Feminino",
+    "pasta": "Pré Missão",
+    "lugar":"Templo de São Paulo",
     "categoria": "ensaio_pamella",
     "tipo": "Ensaio Feminino 2",
     "banner": "",
@@ -129,7 +132,8 @@
     ]
   },
   {
-    "pasta": "Pós-Missão Masculino",
+    "pasta": "Pós-Missão",
+    "lugar":"Templo de São Paulo",
     "categoria": "ensaio_masculino2",
     "tipo": "Ensaio Masculino 2",
     "banner": "",
@@ -178,6 +182,7 @@
   },
   {
     "pasta": "Infantil",
+    "lugar":"Templo de São Paulo",
     "categoria": "infantil",
     "tipo": "Ensaio Infantil",
     "banner": "",
@@ -210,7 +215,8 @@
     ]
   },
   {
-    "pasta": "Pre-wedding",
+    "pasta": "Casamento",
+    "lugar": "Parque",
     "categoria": "prewedding",
     "tipo": "Evento Pré-Wedding",
     "banner": "",
@@ -356,7 +362,8 @@
   },
 
   {
-    "pasta": "casamento-vitoria-e-lucas",
+    "pasta": "Casamento",
+    "lugar":"Templo de São Paulo",
     "categoria": "casamento",
     "tipo": "Evento Casamento",
     "banner": "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/1.jpg",
@@ -645,6 +652,33 @@
       "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Convidados/21.jpg"
 
 
+    ]
+  },
+  {
+    "pasta": "Casamento",
+    "lugar":"Templo de São Paulo",
+    "categoria": "selamento",
+    "tipo": "Evento Casamento",
+    "banner": "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/2.jpg",
+    "alt": "Banner Casamento",
+    "arquivos": [
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/1.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/2.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/3.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/4.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/5.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/6.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/7.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/8.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/9.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/10.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/12.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/13.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/14.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/15.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/16.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/17.jpg",
+      "https://wzbzqpstmvukoylqqxug.supabase.co/storage/v1/object/public/albuns/Casamento-Vitoria-e-Lucas/Templo/18.jpg"
     ]
   }
 ]

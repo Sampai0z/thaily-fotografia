@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import c from "../styles/layouts/Trabalhos.module.css";
 
 const images = [
-  { src: "selamento.jpg", alt: "Selamento", tipo: "Casamento", categoria: "casamento" },
+  { src: "selamento.jpg", alt: "Selamento", tipo: "Casamento", categoria: "selamento" },
   { src: "pre_wedding.jpg", alt: "Pre wedding", tipo: "Casamento", categoria: "prewedding" },
   { src: "cerimonia_casamento.jpg", alt: "Cerimônia de Casamento", tipo: "Casamento", categoria: "casamento" },
   { src: "ensaio_infantil.jpg", alt: "Ensaio Infantil", tipo: "Infantil", categoria: "infantil" },
@@ -29,7 +29,7 @@ export default function Trabalhos() {
 
   // Value do Array categorias: categoria de images 
   const categoriaMap = {
-    "casamento": ["casamento", "prewedding"],
+    "casamento": ["selamento", "prewedding", "casamento"],
     "pré-missão": ["gabriel", "ensaio_pamella"],
     "pós-missão": ["ensaio_masculino2", "ensaio_gomes"],
     "aniversario": ["aniversario"],
@@ -65,8 +65,7 @@ export default function Trabalhos() {
         {imagensFiltradas.map((image, index) => (
           <div key={index} className={c.foto} onClick={() => navigate(`/trabalhos/${image.categoria}`)}>
             <img src={image.src} alt={image.alt} />
-            <span className={c.titulo}>{image.alt}</span>
-            <span className={c.categoria}>{image.tipo}</span>
+            <span className={c.titulo}>{image.alt} | {image.tipo}</span>
           </div>
         ))}
       </div>
