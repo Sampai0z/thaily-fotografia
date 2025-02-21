@@ -1,24 +1,26 @@
 // import { Quote } from "lucide-react";
-import Thaily from "/contato.jpg";
 import c from "../styles/components/Depoimentos.module.css";
 import Rating from "@mui/material/Rating";
 
 export default function Depoimentos() {
   const testimonials = [
     {
-      text: "Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.",
-      author: "CÉLIA ALMEIDA",
+      src: "depoimento1.jpeg",
+      text: "Ficaram lindas! Muito obrigada por essa experiência.",
+      author: "Pamella",
       value: 4.5,
     },
     {
-      text: "Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.",
-      author: "FRANK KINNEY",
-      value: 4,
+      src: "depoimento3.jpg",
+      text: "Liiindaaaaas!!! parabens! as fotos estão tão leves e transmitem o mesmo sentimento da cerimonia, você conseguiu captar tudo com muita delicadeza.",
+      author: "Vitoria e Lucas",
+      value: 5,
     },
     {
-      text: "Proin sed libero enim sed faucibus turpis. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.",
-      author: "CASAR COM LARSON",
-      value: 5,
+      src: "depoimento2.jpg",
+      text: "foi o que eu disse, eu achei incrivel, eu gostei muito, muito profissional.",
+      author: "Gabriel Morango",
+      value: 4,
     },
   ];
 
@@ -27,20 +29,17 @@ export default function Depoimentos() {
       <div className={c.header}>
         <h2 className={c.title}>Fornecemos valor aos nossos clientes</h2>
         <p className={c.subtitle}>
-          Instantes de uma vida. A fotografia que te faz sentir, lembrar e amar.
-          Que te faz recordar para sempre de um momento ou fase de sua vida. Que
-          te traz a experiência de auto conhecimento, se amando mais e se vendo
-          pelo olhar de uma outra pessoa. Notando em si detalhes que talvez
-          nunca tenha percebido serem tão lindos. A fotografia, a arte do
-          registro sagrado, trazendo a nostalgia de coisas que fazem parte da
-          sua história e de quem você é
+          Capturamos momentos únicos e emocionantes, e nada nos deixa mais
+          felizes do que ver a satisfação de nossos clientes. Confira as
+          experiências de quem confiou em nosso olhar para eternizar suas
+          memórias!
         </p>
       </div>
 
       <div className={c.grid}>
         {testimonials.map((testimonial, index) => (
           <div key={index} className={c.card}>
-            <img src={Thaily} className={c.icon} />
+            <img src={testimonial.src} className={c.icon} />
             <p className={c.testimonialText}>{testimonial.text}</p>
             <p className={c.author}>{testimonial.author}</p>
             <Rating

@@ -1,5 +1,5 @@
 .section {
-  padding: 4rem 1rem;
+  padding: 0rem 1rem;
   max-width: 1280px;
   margin: 0 auto;
 }
@@ -13,6 +13,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 .subtitle {
@@ -39,7 +40,7 @@
 
 .icon {
   width: 50%;
-  color: #2dd4bf;
+  border-radius: 5px;
   margin-bottom: 1rem;
 }
 
