@@ -1,79 +1,462 @@
 .container {
-  min-height: 90vh;
-  background-color: #f3f4f6;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 1rem;
+  background: linear-gradient(
+    to bottom right,
+    rgb(254 242 242),
+    rgb(250 245 255)
+  );
+}
+
+.cardWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.decorPurple,
+.decorRose {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(16px);
+  opacity: 0.6;
+}
+
+.decorPurple {
+  width: 6rem;
+  height: 6rem;
+  top: -1.5rem;
+  left: -1.5rem;
+  background-color: rgb(233 213 255);
+}
+
+.decorRose {
+  width: 8rem;
+  height: 8rem;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background-color: rgb(254 205 211);
 }
 
 .card {
-  max-width: 28rem;
-  width: 100%;
-  background-color: white;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  border-radius: 0.5rem;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid rgb(233 213 255);
+}
+
+.profileWrapper {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+}
+
+.profileRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: linear-gradient(to top right, rgb(147 51 234), rgb(244 63 94));
+  animation: spin 8s linear infinite;
+}
+
+.profileInner {
+  position: absolute;
+  inset: 4px;
+  background: white;
+  border-radius: 9999px;
+}
+
+.profileImageWrapper {
+  position: absolute;
+  inset: 8px;
+  border-radius: 9999px;
   overflow: hidden;
 }
 
-.cardContent {
-  padding: 2rem 1.5rem;
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.image {
+.headerContent {
+  text-align: center;
   display: flex;
-  justify-items: center;
-  justify-self: center;
-  border-radius: 100%;
-  width: 50%;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .title {
   font-size: 1.875rem;
-  font-weight: bold;
-  text-align: center;
-  color: #1f2937;
-  margin-bottom: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, rgb(147 51 234), rgb(244 63 94));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.description {
-  color: #4b5563;
-  text-align: center;
-  margin-bottom: 2rem;
+.subtitle {
+  color: rgb(75 85 99);
 }
 
 .contactList {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.contactItem {
+.contactButton {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  color: #374151;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(233 213 255);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
 }
 
-.contactItem:hover {
-  color: #111827;
+.contactButton:hover {
+  border-color: rgb(216 180 254);
+  transform: scale(1.02);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
 }
 
 .icon {
-  color: #9ca3af;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.whatsappIcon {
+  background-color: rgb(220 252 231);
+  color: rgb(22 163 74);
+}
+
+.contactButton:hover .whatsappIcon {
+  background-color: rgb(22 163 74);
+  color: white;
+}
+
+.emailIcon {
+  background-color: rgb(233 213 255);
+  color: rgb(147 51 234);
+}
+
+.contactButton:hover .emailIcon {
+  background-color: rgb(147 51 234);
+  color: white;
+}
+
+.instaIcon {
+  background-color: rgb(254 205 211);
+  color: rgb(225 29 72);
+}
+
+.contactButton:hover .instaIcon {
+  background-color: rgb(225 29 72);
+  color: white;
+}
+
+.contactText {
+  font-family: sans-serif;
+  color: rgb(75 85 99);
+  transition: color 0.2s ease;
+}
+
+.contactButton:hover .contactText {
+  color: rgb(17 24 39);
 }
 
 .footer {
-  background-color: #f9fafb;
-  padding: 1rem 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
 }
 
 .footerText {
   font-size: 0.875rem;
-  color: #6b7280;
+  color: rgb(107 114 128);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footerIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .contactButton {
+    padding: 0.75rem;
+  }
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(
+    to bottom right,
+    rgb(254 242 242),
+    rgb(250 245 255)
+  );
+}
+
+.cardWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.decorPurple,
+.decorRose {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(16px);
+  opacity: 0.6;
+}
+
+.decorPurple {
+  width: 6rem;
+  height: 6rem;
+  top: -1.5rem;
+  left: -1.5rem;
+  background-color: rgb(233 213 255);
+}
+
+.decorRose {
+  width: 8rem;
+  height: 8rem;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background-color: rgb(254 205 211);
+}
+
+.card {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border: 1px solid rgb(233 213 255);
+}
+
+.profileWrapper {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto;
+}
+
+.profileRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: linear-gradient(to top right, rgb(147 51 234), rgb(244 63 94));
+  animation: spin 8s linear infinite;
+}
+
+.profileInner {
+  position: absolute;
+  inset: 4px;
+  background: white;
+  border-radius: 9999px;
+}
+
+.profileImageWrapper {
+  position: absolute;
+  inset: 8px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.headerContent {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  background: linear-gradient(to right, rgb(147 51 234), rgb(244 63 94));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  color: rgb(75 85 99);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contactList a {
+  text-decoration: none;
+}
+
+.contactButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgb(233 213 255);
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.contactButton:hover {
+  border-color: rgb(216 180 254);
+  transform: scale(1.02);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.iconWrapper {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.whatsappIcon {
+  background-color: rgb(220 252 231);
+  color: rgb(22 163 74);
+}
+
+.contactButton:hover .whatsappIcon {
+  background-color: rgb(22 163 74);
+  color: white;
+}
+
+.emailIcon {
+  background-color: rgb(233 213 255);
+  color: rgb(147 51 234);
+}
+
+.contactButton:hover .emailIcon {
+  background-color: rgb(147 51 234);
+  color: white;
+}
+
+.instaIcon {
+  background-color: rgb(254 205 211);
+  color: rgb(225 29 72);
+}
+
+.contactButton:hover .instaIcon {
+  background-color: rgb(225 29 72);
+  color: white;
+}
+
+.contactText {
+  text-decoration: none;
+  color: rgb(75 85 99);
+  transition: color 0.2s ease;
+}
+
+.contactButton:hover .contactText {
+  color: rgb(17 24 39);
+}
+
+.footer {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footerText {
+  font-size: 0.875rem;
+  color: rgb(107 114 128);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footerIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .contactButton {
+    padding: 0.75rem;
+  }
 }

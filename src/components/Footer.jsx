@@ -83,7 +83,7 @@ export default function Footer() {
       <div className={c.line}></div>
       <div className={c.direitos}>
         <div>©2025 All Rights Reserved.</div>
-        <div>DuoWave.</div>
+        <div>Desenvolvido por DuoWave.</div>
       </div>
     </footer>
   );
