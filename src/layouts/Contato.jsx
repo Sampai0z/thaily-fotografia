@@ -33,14 +33,14 @@ export default function Contato() {
 
           <div className={c.contactList}>
             <a
-              href="https://wa.me/5511948413121"
+              href="https://wa.me/5511962630590"
               className={c.contactButton}
               target="_blank"
             >
               <div className={`${c.iconWrapper} ${c.whatsappIcon}`}>
                 {<i className="fa-brands fa-whatsapp"></i>}
               </div>
-              <span className={c.contactText}>+55 (11) 93456-7890</span>
+              <span className={c.contactText}>+55 (11) 96263-0590</span>
             </a>
 
             <a

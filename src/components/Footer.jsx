@@ -37,11 +37,11 @@ export default function Footer() {
               <li>
                 <i className="fa-brands fa-whatsapp"></i>
                 <a
-                  href="https://wa.me/5511948413121"
+                  href="https://wa.me/5511962630590"
                   className={c.a}
                   target="_blank"
                 >
-                  &nbsp; (12)93456-7890
+                  &nbsp; +55 (11) 96263-0590
                 </a>
               </li>
               <li>
