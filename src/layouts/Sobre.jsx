@@ -12,9 +12,8 @@ export default function Sobre() {
         <div className={c.caixaTexto}>
           <h3>Conheça Thaily</h3>
           <img className={c.detalhe} src={detail1} alt="" />
-          <img className={c.detalhe2} src={detail1} alt="" />
           <p>
-            Me chamo Thaily, trabalho com a fotografia há 5 anos. Sou formada em
+            Me chamo Thaily, trabalho com a fotografia há 6 anos. Sou formada em
             Técnico em Processos Fotográficos no Senac. Estou sempre buscando
             conhecimento e aprimorando o que já aprendi na fotografia.Apaixonada
             pela arte de registrar histórias, contadas por imagens que compõem a
@@ -23,6 +22,7 @@ export default function Sobre() {
             para conseguir realizar esse sonho de se tornar uma Fotografa
             Profissional.
           </p>
+          <img className={c.detalhe2} src={detail1} alt="" />
         </div>
       </main>
     </>
