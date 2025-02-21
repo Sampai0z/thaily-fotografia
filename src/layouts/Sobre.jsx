@@ -5,7 +5,6 @@ import detail1 from "/detalheSobre.png";
 export default function Sobre() {
   return (
     <>
-      <div></div>
       <main className={c.Container}>
         <div className={c.foto}>
           <img src={Thaily} alt="thaily perfil" />
@@ -24,7 +23,6 @@ export default function Sobre() {
             para conseguir realizar esse sonho de se tornar uma Fotografa
             Profissional.
           </p>
-          <div></div>
         </div>
       </main>
     </>

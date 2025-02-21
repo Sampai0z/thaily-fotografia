@@ -37,7 +37,6 @@
   margin: 36vh 0;
 }
 
-
 .ativo {
   background-color: #e5e5e5;
   color: #8a51bf;
@@ -50,6 +49,541 @@
 
 @media (max-width: 480px) {
   .galeria {
+    .Container {
+      width: 100vw;
+      height: auto;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+    }
+
+    .menu {
+      width: 70vw;
+      margin: 0 0 2rem;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .menu span {
+      margin: 0 0.1rem;
+      padding: 0.5rem 0.5rem;
+      cursor: pointer;
+    }
+
+    .ativo {
+      color: #7960ae;
+      background-color: #e5e5e5;
+    }
+
+    .ContainerFotos {
+      width: 70%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: start;
+    }
+    .foto {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0.3rem;
+    }
+
+    .foto:hover {
+      scale: 0.9;
+      transition: 0.2s ease-out;
+    }
+
+    .foto img {
+      width: 20rem;
+      height: 12rem;
+    }
+
+    .titulo {
+      padding: 1rem 0rem 0.5rem 0.5rem;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .categoria {
+      padding: 0.5rem 0rem 2rem 0.5rem;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #202020;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        width: 100vw;
+        margin: 0 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .menu span {
+        margin: 0 0.1rem;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+      }
+
+      .ContainerFotos {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .foto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .foto img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media (max-width: 480px) {
+    }
+    .Container {
+      width: 100vw;
+      height: auto;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+    }
+
+    .menu {
+      width: 70vw;
+      margin: 0 0 2rem;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .menu span {
+      margin: 0 0.1rem;
+      padding: 0.5rem 0.5rem;
+      cursor: pointer;
+    }
+
+    .ativo {
+      color: #7960ae;
+      background-color: #e5e5e5;
+    }
+
+    .ContainerFotos {
+      width: 70%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: start;
+    }
+    .foto {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0.3rem;
+    }
+
+    .foto:hover {
+      scale: 0.9;
+      transition: 0.2s ease-out;
+    }
+
+    .foto img {
+      width: 20rem;
+      height: 12rem;
+    }
+
+    .titulo {
+      padding: 1rem 0rem 0.5rem 0.5rem;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .categoria {
+      padding: 0.5rem 0rem 2rem 0.5rem;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #202020;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        width: 100vw;
+        margin: 0 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .menu span {
+        margin: 0 0.1rem;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+      }
+
+      .ContainerFotos {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .foto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .foto img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media (max-width: 480px) {
+    }
+    .Container {
+      width: 100vw;
+      height: auto;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+    }
+
+    .menu {
+      width: 70vw;
+      margin: 0 0 2rem;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .menu span {
+      margin: 0 0.1rem;
+      padding: 0.5rem 0.5rem;
+      cursor: pointer;
+    }
+
+    .ativo {
+      color: #7960ae;
+      background-color: #e5e5e5;
+    }
+
+    .ContainerFotos {
+      width: 70%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: start;
+    }
+    .foto {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0.3rem;
+    }
+
+    .foto:hover {
+      scale: 0.9;
+      transition: 0.2s ease-out;
+    }
+
+    .foto img {
+      width: 20rem;
+      height: 12rem;
+    }
+
+    .titulo {
+      padding: 1rem 0rem 0.5rem 0.5rem;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .categoria {
+      padding: 0.5rem 0rem 2rem 0.5rem;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #202020;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        width: 100vw;
+        margin: 0 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .menu span {
+        margin: 0 0.1rem;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+      }
+
+      .ContainerFotos {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .foto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .foto img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media (max-width: 480px) {
+    }
+    .Container {
+      width: 100vw;
+      height: auto;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+    }
+
+    .menu {
+      width: 70vw;
+      margin: 0 0 2rem;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .menu span {
+      margin: 0 0.1rem;
+      padding: 0.5rem 0.5rem;
+      cursor: pointer;
+    }
+
+    .ativo {
+      color: #7960ae;
+      background-color: #e5e5e5;
+    }
+
+    .ContainerFotos {
+      width: 70%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: start;
+    }
+    .foto {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0.3rem;
+    }
+
+    .foto:hover {
+      scale: 0.9;
+      transition: 0.2s ease-out;
+    }
+
+    .foto img {
+      width: 20rem;
+      height: 12rem;
+    }
+
+    .titulo {
+      padding: 1rem 0rem 0.5rem 0.5rem;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .categoria {
+      padding: 0.5rem 0rem 2rem 0.5rem;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #202020;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        width: 100vw;
+        margin: 0 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .menu span {
+        margin: 0 0.1rem;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+      }
+
+      .ContainerFotos {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .foto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .foto img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media (max-width: 480px) {
+    }
+    .Container {
+      width: 100vw;
+      height: auto;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+    }
+
+    .menu {
+      width: 70vw;
+      margin: 0 0 2rem;
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .menu span {
+      margin: 0 0.1rem;
+      padding: 0.5rem 0.5rem;
+      cursor: pointer;
+    }
+
+    .ativo {
+      color: #7960ae;
+      background-color: #e5e5e5;
+    }
+
+    .ContainerFotos {
+      width: 70%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: start;
+    }
+    .foto {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem 0.3rem;
+    }
+
+    .foto:hover {
+      scale: 0.9;
+      transition: 0.2s ease-out;
+    }
+
+    .foto img {
+      width: 20rem;
+      height: 12rem;
+    }
+
+    .titulo {
+      padding: 1rem 0rem 0.5rem 0.5rem;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .categoria {
+      padding: 0.5rem 0rem 2rem 0.5rem;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #202020;
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        width: 100vw;
+        margin: 0 0 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      .menu span {
+        margin: 0 0.1rem;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+      }
+
+      .ContainerFotos {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: start;
+      }
+
+      .foto {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      .foto img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    @media (max-width: 480px) {
+    }
     column-count: 2;
   }
 }
