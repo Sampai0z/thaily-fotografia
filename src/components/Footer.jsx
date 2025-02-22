@@ -24,7 +24,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="#" className={c.link}>
+              <Link to="/sobre" className={c.link}>
                 SOBRE
               </Link>
             </li>
