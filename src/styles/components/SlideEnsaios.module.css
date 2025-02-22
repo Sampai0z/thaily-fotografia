@@ -178,8 +178,6 @@ img {
     height: auto;
     padding: 0rem 0rem;
     margin: auto;
-    margin-left: 50%;
-    transform: translateX(-50%);
     overflow: hidden;
   }
   .slider {
