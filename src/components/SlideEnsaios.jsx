@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import c from "../styles/components/SlideEnsaios.module.css";
+import Seta from "../../public/arrow.svg"
 
 const images = [
   { src: "selamento.jpg", alt: "Selamento" },
@@ -66,9 +67,9 @@ export default function SlideEnsaios() {
 
   return (
     <div className={c.sliderContainer}>
-      {/* 🔽 Botão de voltar */}
+      {/* Botão de voltar */}
       <button className={c.arrowLeft} onClick={prevImage}>
-      &#11164;
+        <img src={Seta} alt=""/>
       </button>
 
       <div
@@ -90,23 +91,24 @@ export default function SlideEnsaios() {
             />
           </div>
         ))}
+        {/* 🔵 Indicadores (marcadores) */}
+        <div className={c.indicators}>
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={`${c.dot} ${index === currentIndex ? c.activeDot : ""}`}
+              onClick={() => setCurrentIndex(index)}
+            ></span>
+          ))}
+        </div>
       </div>
 
-      {/* 🔽 Botão de avançar */}
+      {/* Botão de avançar */}
       <button className={c.arrowRight} onClick={nextImage}>
-      &#11166;
+        <img src={Seta} alt=""/>
       </button>
 
-      {/* 🔵 Indicadores (marcadores) */}
-      <div className={c.indicators}>
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={`${c.dot} ${index === currentIndex ? c.activeDot : ""}`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
-        ))}
-      </div>
+      
     </div>
   );
 }

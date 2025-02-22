@@ -77,7 +77,7 @@ export default function GaleriaDeFotos() {
               <img src={pasta.banner} alt={pasta.alt} />
             </div>
             <span className={c.nomePasta}>
-              <p>{pasta.pasta.replace(/-/g, " ")} <br/>{pasta.lugar.replace(/-/g, " ")}</p>
+              <p>{pasta.pasta.replace(/-/g, " ")} <br/> {pasta.lugar.replace(/-/g, " ")}</p>
               <h2>{pasta.tipo.replace(/-/g, " ")}</h2>
             </span>
 
