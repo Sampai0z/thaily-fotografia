@@ -54,8 +54,8 @@ export default function SlideEnsaios() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  function Trabalhos() {
-    navigate("/Trabalhos");
+  function Trabalhos(caminho) {
+    navigate(`/Trabalhos/${caminho}`);
   }
 
   return (
@@ -80,7 +80,7 @@ export default function SlideEnsaios() {
             <img
               src={image.src}
               alt={image.alt}
-              onClick={() => Trabalhos()}
+              onClick={() => Trabalhos(image.path)}
             />
           </div>
         ))}
