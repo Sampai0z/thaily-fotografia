@@ -3,12 +3,12 @@ import c from "../styles/components/SlideEnsaios.module.css";
 import Seta from "../../public/arrow.svg"
 
 const images = [
-  { src: "selamento.jpg", alt: "Selamento" },
-  { src: "pre_wedding.jpg", alt: "Pre_Wedding" },
-  { src: "ensaio_feminino.jpg", alt: "Ensaio Feminino" },
-  { src: "ensaio_infantil.jpg", alt: "Ensaio Infantil" },
-  { src: "ensaio_masculino.jpg", alt: "Ensaio Masculino" },
-  { src: "aniversario.jpg", alt: "Aniversário" },
+  { src: "selamento.jpg", alt: "Selamento", path: "selamento" },
+  { src: "pre_wedding.jpg", alt: "Pre_Wedding", path: "prewedding" },
+  { src: "ensaio_feminino.jpg", alt: "Ensaio Feminino", path: "ensaio_pamella" },
+  { src: "ensaio_infantil.jpg", alt: "Ensaio Infantil", path: "infantil" },
+  { src: "ensaio_masculino.jpg", alt: "Ensaio Masculino", path: "gabriel" },
+  { src: "aniversario.jpg", alt: "Aniversário", path: "aniversario" },
 ];
 
 export default function SlideEnsaios() {
@@ -53,16 +53,7 @@ export default function SlideEnsaios() {
   }, []);
 
   function Trabalhos(caminho) {
-    const eventos = ["Pre_Wedding", "Selamento", "Aniversário"];
-    const ensaios = ["Ensaio Feminino", "Ensaio Masculino", "Ensaio Infantil"];
-
-    if (eventos.includes(caminho)) {
-      window.location.href = "/eventos";
-    } else if (ensaios.includes(caminho)) {
-      window.location.href = "/ensaios";
-    } else {
-      console.error("Caminho não reconhecido:", caminho);
-    }
+    window.location.href = `trabalhos/${caminho}`;
   }
 
   return (
@@ -87,7 +78,7 @@ export default function SlideEnsaios() {
             <img
               src={image.src}
               alt={image.alt}
-              onClick={() => Trabalhos(image.alt)}
+              onClick={() => Trabalhos(image.path)}
             />
           </div>
         ))}
