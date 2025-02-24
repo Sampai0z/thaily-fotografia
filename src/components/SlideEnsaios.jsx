@@ -53,7 +53,7 @@ export default function SlideEnsaios() {
   }, []);
 
   function Trabalhos() {
-    window.location.href = `/Trabalhos`;
+    navigate("/Trabalhos");
   }
 
   return (
