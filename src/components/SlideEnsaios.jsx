@@ -52,7 +52,7 @@ export default function SlideEnsaios() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  function Trabalhos(caminho) {
+  function Trabalhos() {
     window.location.href = `/Trabalhos`;
   }
 
@@ -78,7 +78,7 @@ export default function SlideEnsaios() {
             <img
               src={image.src}
               alt={image.alt}
-              onClick={() => Trabalhos(image.path)}
+              onClick={() => Trabalhos()}
             />
           </div>
         ))}
