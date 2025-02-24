@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import c from "../styles/components/SlideEnsaios.module.css";
 import Seta from "../../public/arrow.svg"
+import { useNavigate } from "react-router-dom";
 
 const images = [
   { src: "selamento.jpg", alt: "Selamento", path: "selamento" },
@@ -14,6 +15,7 @@ const images = [
 export default function SlideEnsaios() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const startX = useRef(0);
+  const navigate = useNavigate();
 
   // Função para avançar imagem
   const nextImage = () => {
